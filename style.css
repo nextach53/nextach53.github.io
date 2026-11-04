@@ -69,6 +69,7 @@ img { max-width: 100%; display: block; }
 .eyebrow { display: inline-block; color: var(--copper); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 13px; }
 .head h2 { font-size: clamp(26px, 3.4vw, 36px); margin: 6px 0 10px; }
 .head p { color: var(--muted); margin: 0; }
+.accent { background: linear-gradient(90deg, var(--copper), var(--copper2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
 main#products { padding-top: 70px; }
 
 /* ---------- product sections ---------- */
