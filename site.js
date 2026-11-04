@@ -1,0 +1,32 @@
+// NEXTACH website: product buttons (download, manual, WhatsApp activation) and the scroll animation.
+// Change the WhatsApp number or the download place here only.
+var WA = "919109955733";
+var FILES = "https://github.com/nextach53/nextach53.github.io/releases/download/installers/";
+
+function waLink(text) { return "https://wa.me/" + WA + "?text=" + encodeURIComponent(text); }
+function external(a) { a.target = "_blank"; a.rel = "noopener"; }
+
+document.querySelectorAll("[data-product]").forEach(function (box) {
+  var name = box.getAttribute("data-product");
+  box.querySelectorAll(".dl").forEach(function (a) { a.href = FILES + box.getAttribute("data-file"); });
+  box.querySelectorAll(".man").forEach(function (a) { a.href = FILES + box.getAttribute("data-manual"); external(a); });
+  box.querySelectorAll(".act").forEach(function (a) {
+    a.href = waLink("Hello NEXTACH, I have installed " + name + " and want to activate it. I am attaching my Request File."
+      + "\n\nCompany name: \nCity: ");
+    external(a);
+  });
+});
+
+document.querySelectorAll(".wa-help").forEach(function (a) {
+  a.href = waLink("Hello NEXTACH, I would like to know more about your software.");
+  external(a);
+});
+
+// fade sections in as they scroll into view (without this script everything simply shows)
+if ("IntersectionObserver" in window) {
+  document.documentElement.classList.add("anim");
+  var seen = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); seen.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".reveal").forEach(function (el) { seen.observe(el); });
+}
