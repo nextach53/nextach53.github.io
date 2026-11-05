@@ -142,9 +142,6 @@ main#products { padding-top: 70px; }
 .foot-in span { display: flex; align-items: center; gap: 8px; }
 .foot-in img { width: 22px; height: 22px; }
 .foot a { color: var(--muted); }
-.sums { margin-top: 12px; }
-.sums summary { cursor: pointer; }
-.sums pre { overflow-x: auto; font-size: 12px; background: var(--bg2); padding: 10px; border-radius: 8px; }
 
 /* floating WhatsApp */
 .wa-float { position: fixed; right: 18px; bottom: 18px; z-index: 60; width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center;
@@ -181,3 +178,8 @@ code { background: var(--bg2); padding: 1px 6px; border-radius: 5px; font-size: 
   .contact-in { padding: 28px 20px; }
   .contact-in .btn { width: 100%; }
 }
+
+/* WhatsApp logo on the buttons */
+.wa-ico { width: 20px; height: 20px; flex: 0 0 auto; }
+.wa-ico use, .wa-ico path { fill: #fff; }
+.actions .btn-wa, .hero-cta .btn-wa { white-space: normal; text-align: center; }
