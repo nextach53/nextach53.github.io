@@ -183,3 +183,7 @@ code { background: var(--bg2); padding: 1px 6px; border-radius: 5px; font-size: 
 .wa-ico { width: 20px; height: 20px; flex: 0 0 auto; }
 .wa-ico use, .wa-ico path { fill: #fff; }
 .actions .btn-wa, .hero-cta .btn-wa { white-space: normal; text-align: center; }
+
+/* referral */
+.referral { padding: 0 0 72px; }
+.ref-cta { margin-top: 28px; text-align: center; }
