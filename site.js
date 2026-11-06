@@ -19,6 +19,11 @@ document.querySelectorAll(".wa-help").forEach(function (a) {
   external(a);
 });
 
+document.querySelectorAll(".wa-refer").forEach(function (a) {
+  a.href = waLink("Hello NEXTACH, I would like to know more about Refer & Earn.");
+  external(a);
+});
+
 // fade sections in as they scroll into view (without this script everything simply shows)
 if ("IntersectionObserver" in window) {
   document.documentElement.classList.add("anim");
