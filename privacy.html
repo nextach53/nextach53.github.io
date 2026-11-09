@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy policy - NEXTACH</title>
-<meta name="description" content="Privacy policy for NEXTACH PUNCH and other NEXTACH software.">
+<meta name="description" content="Privacy policy for NEXTACH BOOK, FEE, DORMA and PUNCH.">
 <link rel="icon" href="nextach_mark.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -19,7 +19,7 @@
 
 <main class="wrap doc">
   <h1>Privacy policy</h1>
-  <p class="muted">Effective 5 November 2026 · applies to NEXTACH PUNCH (Android) and the other NEXTACH products</p>
+  <p class="muted">Effective 9 November 2026 · applies to NEXTACH BOOK, FEE and DORMA (Windows) and NEXTACH PUNCH (Android)</p>
 
   <h2>In short</h2>
   <ul>
@@ -30,7 +30,9 @@
   </ul>
 
   <h2>1. Who we are</h2>
-  <p>NEXTACH develops business software, including NEXTACH PUNCH, an attendance and payroll app for Android.
+  <p>NEXTACH develops business software: NEXTACH BOOK (accounts &amp; inventory), FEE (coaching institutes) and DORMA
+    (hostels &amp; PGs) for Windows, and NEXTACH PUNCH, an attendance and payroll app for Android. Sections 2, 3 and 9
+    describe PUNCH; section 10 describes the Windows products.
     Contact: <a href="mailto:nextach53@gmail.com">nextach53@gmail.com</a>.</p>
 
   <h2>2. Data the app keeps on your device</h2>
@@ -57,15 +59,18 @@
   </ul>
 
   <h2>4. Google Drive backup (optional)</h2>
-  <p>If the Admin taps "Connect Google Drive", Google asks the Admin to choose a Google account and allow access.
-    The app asks only for the permission <code>drive.file</code>, which means it can see and manage
-    <b>only the files it creates itself</b> (backups in the folder <code>NEXTACH_PUNCH_Backup</code>). It cannot see any
-    other files in that Google Drive. The app uses this access only to upload, list, download (for restore) and remove
-    old backup files, and it reads the account's e-mail address to show which account is connected.</p>
-  <p>Backups go directly from the device to the Admin's own Google Drive. NEXTACH does not receive them.
-    The Admin can disconnect at any time in the app, or remove access at
+  <p>This applies to NEXTACH PUNCH on Android and to NEXTACH BOOK, FEE and DORMA on Windows. If the Admin clicks
+    "Connect Google Drive", Google asks the Admin to choose a Google account and allow access. The software asks only for
+    the permission <code>drive.file</code>, which means it can see and manage <b>only the files it creates itself</b>:
+    backups in the folders <code>NEXTACH_PUNCH_Backup</code>, <code>NEXTACH_BOOK_Backup</code>,
+    <code>NEXTACH_FEE_Backup</code> or <code>NEXTACH_DORMA_Backup</code>. It cannot see any other files in that Google
+    Drive. It uses this access only to upload, list, download (for restore) and remove old backup files, and it reads the
+    account's e-mail address to show which account is connected.</p>
+  <p>Backups go directly from the customer's own phone or computer to the Admin's own Google Drive. NEXTACH does not
+    receive them. On Windows the Google permission is stored on that computer, encrypted for its Windows user. The Admin
+    can disconnect at any time in the software, or remove access at
     <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
-  <p>NEXTACH PUNCH's use and transfer of information received from Google APIs adheres to the
+  <p>NEXTACH's use and transfer of information received from Google APIs adheres to the
     <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
     including the Limited Use requirements. Data received from Google APIs is not used for advertising, is not sold,
     and is not transferred to anyone.</p>
@@ -95,8 +100,9 @@
   <h2>7. Keeping and deleting data</h2>
   <p>Data stays on the device until the Admin deletes it. In Company Profile the Admin can choose to keep only the
     last few years of data; older data is removed automatically after a backup is made. Uninstalling the app deletes
-    all data on the device. Backups in Google Drive stay until the Admin deletes the
-    <code>NEXTACH_PUNCH_Backup</code> folder. Employees who want their data corrected or removed should contact
+    all data on the device. Backups in Google Drive stay until the Admin deletes the backup folder
+    (<code>NEXTACH_PUNCH_Backup</code>, <code>NEXTACH_BOOK_Backup</code>, <code>NEXTACH_FEE_Backup</code> or
+    <code>NEXTACH_DORMA_Backup</code>). Employees who want their data corrected or removed should contact
     their employer (the Admin), who controls it.</p>
 
   <h2>8. Security</h2>
@@ -106,9 +112,20 @@
   <h2>9. Children</h2>
   <p>NEXTACH PUNCH is a business tool for employers and is not directed at children.</p>
 
-  <h2>10. Other NEXTACH products</h2>
-  <p>The other NEXTACH Products also keep their data on the customer's own computer or phone. NEXTACH receives only
-    the files the customer chooses to send, such as a licence request.</p>
+  <h2>10. NEXTACH BOOK, FEE and DORMA (Windows)</h2>
+  <ul>
+    <li><b>Where data is kept</b>: on the customer's own head-office computer. Branches and other computers open it through
+      a web browser; nothing is stored on NEXTACH servers.</li>
+    <li><b>Access over the Internet (optional)</b>: if the customer turns on Remote access, branches reach the head-office
+      computer through a secure link that the customer sets up (for example a Cloudflare Tunnel on the customer's own
+      account). NEXTACH does not receive this traffic.</li>
+    <li><b>WhatsApp (optional)</b>: as in section 5, bills, receipts, reminders and reports are sent through the number the
+      Admin links, to the customer, student, resident or report numbers entered in the software.</li>
+    <li><b>Currency rates (NEXTACH BOOK)</b>: once a day the software reads public exchange rates from a rate service on the
+      Internet. Only the request for the day's rates is sent - no business data.</li>
+    <li><b>Licence activation</b>: the request file contains the business name and contact details, the numbers of branches,
+      users and locations requested, and a computer code made from the computer's identifiers by a one-way hash.</li>
+  </ul>
 
   <h2>11. Changes</h2>
   <p>If this policy changes, the new version will be published on this page with a new effective date.</p>
