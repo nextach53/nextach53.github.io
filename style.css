@@ -187,3 +187,9 @@ code { background: var(--bg2); padding: 1px 6px; border-radius: 5px; font-size: 
 /* referral */
 .referral { padding: 0 0 72px; }
 .ref-cta { margin-top: 28px; text-align: center; }
+
+/* 09-11-2026: Download + WhatsApp buttons, SHA-256 file check */
+.actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.sums { margin: 26px auto 0; max-width: 760px; font-size: 13px; color: var(--muted); }
+.sums summary { cursor: pointer; font-weight: 600; }
+.sums pre { white-space: pre-wrap; word-break: break-all; background: #fff; border: 1px solid rgba(31,51,84,.12); border-radius: 10px; padding: 10px 12px; font-size: 11.5px; }
