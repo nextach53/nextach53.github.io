@@ -14,6 +14,13 @@ document.querySelectorAll("[data-product]").forEach(function (box) {
   });
 });
 
+// Download buttons: the setup / APK in the GitHub release "installers" (file name kept up to date by Super Admin -> Publish)
+var DL = "https://github.com/nextach53/nextach53.github.io/releases/download/installers/";
+document.querySelectorAll("a.dl[data-file]").forEach(function (a) {
+  a.href = DL + encodeURIComponent(a.getAttribute("data-file"));
+  a.setAttribute("download", "");
+});
+
 document.querySelectorAll(".wa-help").forEach(function (a) {
   a.href = waLink("Hello NEXTACH, I would like to know more about your software.");
   external(a);
