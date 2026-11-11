@@ -39,3 +39,17 @@ if ("IntersectionObserver" in window) {
   }, { threshold: 0.12 });
   document.querySelectorAll(".reveal").forEach(function (el) { seen.observe(el); });
 }
+
+// The real screens of every product (11-11-2026): one after the other in its phone / browser frame; a button below shows that screen
+document.querySelectorAll(".shots").forEach(function (box) {
+  var imgs = box.querySelectorAll("img"), art = box.closest(".p-art"), tabs = art ? art.querySelectorAll(".ph-tabs button") : [], i = 0, timer = null;
+  if (imgs.length < 2) return;
+  function show(n) {
+    i = n % imgs.length;
+    imgs.forEach(function (im, k) { im.classList.toggle("on", k === i); });
+    tabs.forEach(function (t, k) { t.classList.toggle("on", k === i); });
+  }
+  function run() { clearInterval(timer); timer = setInterval(function () { show(i + 1); }, 3500); }
+  tabs.forEach(function (t, k) { t.addEventListener("click", function () { show(k); run(); }); });
+  if (!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches)) run();
+});
