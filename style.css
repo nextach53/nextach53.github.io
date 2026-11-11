@@ -193,3 +193,15 @@ code { background: var(--bg2); padding: 1px 6px; border-radius: 5px; font-size: 
 .sums { margin: 26px auto 0; max-width: 760px; font-size: 13px; color: var(--muted); }
 .sums summary { cursor: pointer; font-weight: 600; }
 .sums pre { white-space: pre-wrap; word-break: break-all; background: #fff; border: 1px solid rgba(31,51,84,.12); border-radius: 10px; padding: 10px 12px; font-size: 11.5px; }
+
+/* real screens of the products (11-11-2026), changing every few seconds: PUNCH in the phone, the others in the browser frame */
+.browser.shots img { display: block; width: 100%; opacity: 0; transition: opacity .6s ease; }
+.browser.shots img:not(:first-of-type) { position: absolute; left: 8px; top: 30px; width: calc(100% - 16px); }
+.browser.shots img.on { opacity: 1; }
+.ph-tabs { flex-wrap: wrap; }
+.screen.shots { position: relative; padding: 0; aspect-ratio: 492 / 901; }
+.screen.shots img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; opacity: 0; transition: opacity .6s ease; }
+.screen.shots img.on { opacity: 1; }
+.ph-tabs { display: flex; justify-content: center; gap: 6px; margin-top: 14px; }
+.ph-tabs button { border: 1px solid var(--line); background: #fff; color: var(--navy); border-radius: 999px; padding: 5px 12px; font: inherit; font-size: 13px; cursor: pointer; }
+.ph-tabs button.on { background: var(--navy); color: #fff; border-color: var(--navy); }
