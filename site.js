@@ -64,6 +64,21 @@ document.querySelectorAll(".wa-refer").forEach(function (a) {
   });
 })();
 
+// 15-11-2026: "Watch the video" - the product's Hindi intro video plays in a full-screen box (loaded only when asked)
+document.querySelectorAll(".vid[data-video]").forEach(function (b) {
+  b.addEventListener("click", function () {
+    var box = document.createElement("div");
+    box.className = "zoom vbox";
+    box.innerHTML = '<video controls autoplay playsinline preload="auto"></video><span role="button" aria-label="Close">×</span>';
+    var v = box.firstChild;
+    v.src = b.getAttribute("data-video");
+    v.poster = b.getAttribute("data-poster");
+    v.setAttribute("aria-label", b.getAttribute("data-title") + " intro video");
+    box.addEventListener("click", function (e) { if (e.target !== v) { v.pause(); box.remove(); } });
+    document.body.appendChild(box);
+  });
+});
+
 // 14-11-2026: "Ask us" panel - the question goes to the developer's WhatsApp (DEV_WA), not Customer Care
 var DEV_WA = "917000215253";
 (function () {
