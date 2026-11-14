@@ -26,6 +26,12 @@ document.querySelectorAll(".wa-help").forEach(function (a) {
   external(a);
 });
 
+document.querySelectorAll(".wa-biz").forEach(function (a) {    // 14-11-2026: Businesses section
+  a.href = waLink("Hello NEXTACH, I would like a free demo for my business."
+    + "\n\nBusiness type (supermarket / wholesaler / distributor / dealer / manufacturer / other): \nCountry: \nCity: ");
+  external(a);
+});
+
 document.querySelectorAll(".wa-refer").forEach(function (a) {
   a.href = waLink("Hello NEXTACH, I would like to know more about Refer & Earn.");
   external(a);
