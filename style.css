@@ -205,3 +205,40 @@ code { background: var(--bg2); padding: 1px 6px; border-radius: 5px; font-size: 
 .ph-tabs { display: flex; justify-content: center; gap: 6px; margin-top: 14px; }
 .ph-tabs button { border: 1px solid var(--line); background: #fff; color: var(--navy); border-radius: 999px; padding: 5px 12px; font: inherit; font-size: 13px; cursor: pointer; }
 .ph-tabs button.on { background: var(--navy); color: #fff; border-color: var(--navy); }
+
+/* ---------- businesses + countries (14-11-2026) ---------- */
+.biz { padding: 64px 0 56px; background: var(--bg); }
+.biz-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 34px; }
+.biz-card { display: flex; flex-direction: column; background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 22px;
+  text-decoration: none; color: inherit; transition: transform .2s, box-shadow .2s, border-color .2s; }
+.biz-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--gold); }
+.biz-card .ic { font-size: 30px; }
+.biz-card h4 { font-size: 17px; margin: 10px 0 6px; }
+.biz-card p { margin: 0 0 14px; color: var(--muted); font-size: 14.5px; flex: 1; }
+.biz-card .tag { align-self: flex-start; font: 600 12px Poppins, sans-serif; letter-spacing: 1px; color: var(--copper); background: rgba(181, 83, 44, .08);
+  border: 1px solid rgba(181, 83, 44, .25); border-radius: 999px; padding: 3px 10px; }
+.countries { padding: 64px 0; color: #fff;
+  background: radial-gradient(900px 400px at 10% 0%, #3A5A8C 0%, transparent 60%), linear-gradient(160deg, var(--navy) 0%, #162641 100%); }
+.countries .head h2 { color: #fff; }
+.countries .head p { color: #C7D2E1; }
+.countries .eyebrow { color: var(--gold2); }
+.cty-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 34px; }
+.cty-card { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); border-radius: var(--r); padding: 20px; }
+.cty-card h4 { color: #fff; font-size: 19px; margin: 12px 0 2px; }
+.cty-card .cur { display: block; color: var(--gold2); font: 600 13px Poppins, sans-serif; letter-spacing: .5px; }
+.cty-card p { color: #D5DEEA; font-size: 14px; margin: 8px 0 0; }
+.fl { display: block; width: 54px; height: 36px; border-radius: 6px; position: relative; overflow: hidden; box-shadow: 0 0 0 2px rgba(255,255,255,.35); }
+.fl.in { background: linear-gradient(#ff9933 0 33.3%, #fff 33.3% 66.6%, #138808 66.6%); }
+.fl.in b { position: absolute; left: 50%; top: 50%; width: 11px; height: 11px; margin: -5.5px; border-radius: 50%; border: 1.5px solid #000080; }
+.fl.ae { background: linear-gradient(90deg, #ef3340 0 25%, transparent 25%), linear-gradient(#009739 0 33.3%, #fff 33.3% 66.6%, #000 66.6%); }
+.fl.ke { background: linear-gradient(#000 0 30%, #fff 30% 35%, #be0027 35% 65%, #fff 65% 70%, #007a3d 70%); }
+.fl.ke b { position: absolute; left: 50%; top: 50%; width: 11px; height: 22px; margin: -11px -5.5px; border-radius: 50%; background: #be0027; border: 1.5px solid #fff; }
+.fl.kw { background: linear-gradient(#007a3d 0 33.3%, #fff 33.3% 66.6%, #ce1126 66.6%); }
+.fl.kw::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 18px; background: #000; clip-path: polygon(0 0, 100% 33.3%, 100% 66.6%, 0 100%); }
+.fl.tz { background: linear-gradient(to bottom right, #1eb53a 0 37%, #fcd116 37% 42%, #000 42% 58%, #fcd116 58% 63%, #00a3dd 63%); }
+@media (max-width: 1000px) { .cty-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 900px) { .biz-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .biz-grid, .cty-grid { grid-template-columns: 1fr; } }
+/* 14-11-2026: menu with Businesses + Countries - the less-used links step aside on medium screens */
+@media (max-width: 1000px) { .links { gap: 16px; } .links a[href="#why"], .links a[href="#activate"] { display: none; } }
+@media (max-width: 800px) { .links a[href="#referral"], .links a[href="#contact"] { display: none; } }
