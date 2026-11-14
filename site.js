@@ -37,6 +37,61 @@ document.querySelectorAll(".wa-refer").forEach(function (a) {
   external(a);
 });
 
+// 14-11-2026: BOOK tour - a numbered tab shows its real screen; "View larger" opens it full size
+(function () {
+  var img = document.getElementById("tour-img");
+  if (!img) return;
+  var tabs = document.querySelectorAll(".tour-tabs button");
+  tabs.forEach(function (b, k) {
+    new Image().src = b.getAttribute("data-img");   // load all screens early so the switch is instant
+    b.addEventListener("click", function () {
+      tabs.forEach(function (t) { t.classList.toggle("on", t === b); t.setAttribute("aria-selected", t === b); });
+      img.src = b.getAttribute("data-img");
+      img.alt = "NEXTACH BOOK " + b.lastChild.textContent + " screen with demonstration data";
+      document.getElementById("tour-n").textContent = "Screen " + ("0" + (k + 1)).slice(-2);
+      document.getElementById("tour-t").textContent = b.getAttribute("data-t");
+      document.getElementById("tour-d").textContent = b.getAttribute("data-d");
+    });
+  });
+  document.getElementById("tour-big").addEventListener("click", function () {
+    var box = document.createElement("div");
+    box.className = "zoom";
+    box.innerHTML = '<img alt=""><span>×</span>';
+    box.firstChild.src = img.src;
+    box.firstChild.alt = img.alt;
+    box.addEventListener("click", function () { box.remove(); });
+    document.body.appendChild(box);
+  });
+})();
+
+// 14-11-2026: "Ask us" panel - the question goes to the developer's WhatsApp (DEV_WA), not Customer Care
+var DEV_WA = "917000215253";
+(function () {
+  var panel = document.getElementById("ask-panel"), nudge = document.getElementById("ask-nudge"), btn = document.querySelector(".ask-btn");
+  if (!panel) return;
+  var topics = panel.querySelectorAll(".ask-topics button"), q = document.getElementById("ask-q"), send = document.getElementById("ask-send");
+  function open(on) {
+    panel.hidden = !on; nudge.hidden = true;
+    btn.setAttribute("aria-expanded", on);
+    if (on) q.focus();
+  }
+  function link() {
+    var topic = panel.querySelector(".ask-topics .on").textContent;
+    send.href = "https://wa.me/" + DEV_WA + "?text=" + encodeURIComponent("Hello NEXTACH, I have a question about: " + topic
+      + (q.value.trim() ? "\n\n" + q.value.trim() : "") + "\n\nName: \nCity: ");
+  }
+  topics.forEach(function (t) {
+    t.addEventListener("click", function () { topics.forEach(function (x) { x.classList.toggle("on", x === t); }); link(); });
+  });
+  q.addEventListener("input", link);
+  external(send); link();
+  document.querySelectorAll(".ask-open").forEach(function (b) { b.addEventListener("click", function () { open(panel.hidden); }); });
+  panel.querySelector(".ask-x").addEventListener("click", function () { open(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") { open(false); var z = document.querySelector(".zoom"); if (z) z.remove(); } });
+  setTimeout(function () { if (panel.hidden) nudge.hidden = false; }, 8000);
+  nudge.addEventListener("click", function () { open(true); });
+})();
+
 // fade sections in as they scroll into view (without this script everything simply shows)
 if ("IntersectionObserver" in window) {
   document.documentElement.classList.add("anim");
