@@ -401,3 +401,11 @@ code { background: var(--bg2); padding: 1px 6px; border-radius: 5px; font-size: 
 }
 @media (max-width: 560px) { .cty-panel { padding: 26px 16px; } }
 .p-tour .browser { padding: 8px; }
+
+/* 15-11-2026: one-time price on each product + the yearly setup note */
+.price { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin: 14px 0 4px; }
+.price .now { font: 800 30px Poppins, sans-serif; color: var(--navy); }
+.price s { color: var(--muted); font-size: 16px; }
+.price .once { flex-basis: 100%; color: var(--teal); font-weight: 600; font-size: 14px; }
+.price-note { text-align: center; color: var(--muted); font-size: 14px; margin-top: 16px; margin-bottom: 0; }
+.prod-jump small .pf { display: block; color: var(--copper); font-weight: 700; font-size: 14px; }
