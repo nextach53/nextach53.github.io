@@ -47,7 +47,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=2f6b527c">
+<link rel="stylesheet" href="style.css?v=baf2cea6">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa-ico" viewBox="0 0 32 32"><path fill="#fff" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.4 10.4 0 0 1-1.8-5.7C5 9.9 9.9 5.2 16 5.2s11 4.7 11 10.6-4.9 10.6-11 10.6zm6-7.9c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.7-1.6-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6.3-.5c.1-.2 0-.4 0-.6l-1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.1-.3-.2-.7-.4z"/></symbol></svg>
@@ -58,7 +58,6 @@
     <nav class="links">
       <a href="#businesses">Who it is for</a>
       <a href="#products">Products</a>
-      <a href="#tour">BOOK Tour</a>
       <a href="#why">Why NEXTACH</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
@@ -115,7 +114,7 @@
   </div>
 </section>
 
-<!-- ============ PRODUCTS (15-11-2026: BOOK and everything about it first, then FEE, DORMA, PUNCH) ============ -->
+<!-- ============ PRODUCTS (15-11-2026: one section per product - text, video, screen tour) ============ -->
 <main id="products">
   <div class="wrap head reveal prod-head">
     <span class="eyebrow">Our products</span>
@@ -130,7 +129,8 @@
   </nav>
 
   <section class="product reveal" id="book" data-product="NEXTACH BOOK">
-    <div class="wrap p-in">
+    <div class="wrap">
+      <div class="p-in">
       <div class="p-text">
         <div class="p-title"><img src="product_book.png" alt=""><div><h3>NEXTACH BOOK</h3><span class="plat">Windows · GST / VAT · India, UAE, Kenya, Kuwait, Tanzania</span></div></div>
         <p class="tagline">Complete Accounts. Smarter Inventory. Business Simplified.</p>
@@ -145,50 +145,34 @@
         <p class="meta">Version 1.0.1 · 46.9 MB · Windows 10 / 11</p>
         <div class="actions"><a class="btn btn-main dl" data-file="NEXTACH_BOOK_Setup_V1.0.1.exe" href="#">⬇ Download setup</a><a class="btn btn-wa act" title="WhatsApp for more information and activation"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><use href="#wa-ico"></use></svg>WhatsApp us</a><button type="button" class="btn btn-line vid" title="2-minute intro video in Hindi" data-video="video_book.mp4" data-poster="video_book.jpg" data-title="NEXTACH BOOK">▶ Watch video</button></div>
       </div>
-      <div class="p-art"><button type="button" class="browser vid poster" data-video="video_book.mp4" data-poster="video_book.jpg" data-title="NEXTACH BOOK" aria-label="Play the NEXTACH BOOK video"><i></i><i></i><i></i><img src="video_book.jpg" alt="NEXTACH BOOK intro video" loading="lazy"><span class="play">▶</span></button><p class="p-cap">2-minute intro video in Hindi · <a href="#tour">see every screen</a></p></div>
-    </div>
-  </section>
-
-<!-- ============ BOOK TOUR (14-11-2026): every transaction screen, demo data ============ -->
-<section class="tour" id="tour">
-  <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">NEXTACH BOOK · Screen tour</span>
-      <h2>NEXTACH BOOK <span class="accent">in action</span></h2>
-      <p>Real screens from NEXTACH BOOK - from the dashboard to every transaction. Tap a screen to see it.</p>
-    </div>
-    <div class="tour-in reveal">
-      <div class="tour-tabs" role="tablist" aria-label="NEXTACH BOOK screens">
-        <button type="button" role="tab" class="on" data-img="tour_book_dashboard.jpg" data-t="Your business at a glance" data-d="Sales, receivables, payables, cash &amp; bank and stock value - with the jobs that need attention today: e-Way Bills, reorders, cheques to deposit, pending orders."><b>01</b>Dashboard</button>
-        <button type="button" role="tab" data-img="tour_book_sale_entry.jpg" data-t="GST bill in seconds" data-d="Pick the customer and products - GST (CGST + SGST or IGST), HSN summary and e-Way Bill details are worked out for you. Print, PDF or WhatsApp."><b>02</b>Sales Bill</button>
-        <button type="button" role="tab" data-img="tour_book_sales.jpg" data-t="Every sale in one list" data-d="Search in several words, filter by date, print, WhatsApp or Excel - edit, print or send any bill from its row."><b>03</b>Sales Register</button>
-        <button type="button" role="tab" data-img="tour_book_purchase.jpg" data-t="Purchases that update stock" data-d="Supplier bills with lot, invoice no. and amount - stock and the supplier's balance change at once."><b>04</b>Purchase</button>
-        <button type="button" role="tab" data-img="tour_book_orders.jpg" data-t="Quotation → Order → Bill" data-d="Quotations, sales and purchase orders, packing slips, pendency and reorder / auto PO - convert one into the next in a click."><b>05</b>Orders</button>
-        <button type="button" role="tab" data-img="tour_book_receipt.jpg" data-t="Receipts from customers" data-d="Cash, cheque or bank receipts, deposited into the right bank account, with the customer's balance updated."><b>06</b>Receipts</button>
-        <button type="button" role="tab" data-img="tour_book_payments.jpg" data-t="Payments and expenses" data-d="Pay suppliers, salaries, rent, electricity and other expenses from cash or bank."><b>07</b>Payments</button>
-        <button type="button" role="tab" data-img="tour_book_cheques.jpg" data-t="Cheques under control" data-d="Pending, due today and bounced cheques, deposit slip printing and bank reconciliation."><b>08</b>Cheques</button>
-        <button type="button" role="tab" data-img="tour_book_balance.jpg" data-t="Who owes what" data-d="Customer, supplier, salesman, account-head, cash &amp; bank and stock balances - opening, debit, credit and closing."><b>09</b>Balance Summary</button>
-        <button type="button" role="tab" data-img="tour_book_gst.jpg" data-t="GST Action Centre" data-d="e-Invoice, e-Way Bill, GSTR-1, GSTR-3B, CMP-08 and GSTR-2B matching - with the bills that still need action."><b>10</b>GST</button>
-        <button type="button" role="tab" data-img="tour_book_dualbook.jpg" data-t="Dual Book - A and C" data-d="Two books in one software. Every entry is marked A or C, and reports show All, A or C. Both books open only with your Full Login Code - other users see A."><b>11</b>Dual Book</button>
+      <div class="p-art"><button type="button" class="browser vid poster" data-video="video_book.mp4" data-poster="video_book.jpg" data-title="NEXTACH BOOK" aria-label="Play the NEXTACH BOOK video"><img src="video_book.jpg" alt="NEXTACH BOOK intro video" loading="lazy"><span class="play">▶</span></button><p class="p-cap">2-minute intro video in Hindi</p></div>
       </div>
-      <figure class="tour-view">
-        <div class="browser"><i></i><i></i><i></i><img id="tour-img" src="tour_book_dashboard.jpg" alt="NEXTACH BOOK Dashboard screen with demonstration data" width="1440" height="900"></div>
-        <figcaption><span class="eyebrow" id="tour-n">Screen 01</span><h3 id="tour-t">Your business at a glance</h3><p id="tour-d">Sales, receivables, payables, cash &amp; bank and stock value - with the jobs that need attention today: e-Way Bills, reorders, cheques to deposit, pending orders.</p>
-          <button type="button" class="btn btn-line btn-sm" id="tour-big">View larger ↗</button></figcaption>
-      </figure>
-    </div>
-    <p class="tour-note">Actual application screens · NEXTACH BOOK 1.0.1 · demonstration data</p>
-  </div>
-</section>
-
-<!-- ============ COUNTRIES (14-11-2026) ============ -->
-<section class="countries" id="countries">
-  <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">NEXTACH BOOK · Countries</span>
-      <h2>One software. <span class="hl">Five countries.</span></h2>
-      <p>Every branch follows its own country's tax rules, returns and currency - while head office sees everything in one place, 24×7.</p>
-    </div>
+      <div class="p-tour">
+        <h4 class="tour-head">NEXTACH BOOK <span class="accent">screen by screen</span></h4>
+        <div class="tour-in">
+          <div class="tour-tabs" role="tablist" aria-label="NEXTACH BOOK screens">
+          <button type="button" role="tab" class="on" data-img="tour_book_dashboard.jpg" data-t="Your business at a glance" data-d="Sales, receivables, payables, cash &amp; bank and stock value - with the jobs that need attention today: e-Way Bills, reorders, cheques to deposit, pending orders."><b>01</b>Dashboard</button>
+          <button type="button" role="tab" data-img="tour_book_sale_entry.jpg" data-t="GST bill in seconds" data-d="Pick the customer and products - GST (CGST + SGST or IGST), HSN summary and e-Way Bill details are worked out for you. Print, PDF or WhatsApp."><b>02</b>Sales Bill</button>
+          <button type="button" role="tab" data-img="tour_book_sales.jpg" data-t="Every sale in one list" data-d="Search in several words, filter by date, print, WhatsApp or Excel - edit, print or send any bill from its row."><b>03</b>Sales Register</button>
+          <button type="button" role="tab" data-img="tour_book_purchase.jpg" data-t="Purchases that update stock" data-d="Supplier bills with lot, invoice no. and amount - stock and the supplier&#x27;s balance change at once."><b>04</b>Purchase</button>
+          <button type="button" role="tab" data-img="tour_book_orders.jpg" data-t="Quotation → Order → Bill" data-d="Quotations, sales and purchase orders, packing slips, pendency and reorder / auto PO - convert one into the next in a click."><b>05</b>Orders</button>
+          <button type="button" role="tab" data-img="tour_book_receipt.jpg" data-t="Receipts from customers" data-d="Cash, cheque or bank receipts, deposited into the right bank account, with the customer&#x27;s balance updated."><b>06</b>Receipts</button>
+          <button type="button" role="tab" data-img="tour_book_payments.jpg" data-t="Payments and expenses" data-d="Pay suppliers, salaries, rent, electricity and other expenses from cash or bank."><b>07</b>Payments</button>
+          <button type="button" role="tab" data-img="tour_book_cheques.jpg" data-t="Cheques under control" data-d="Pending, due today and bounced cheques, deposit slip printing and bank reconciliation."><b>08</b>Cheques</button>
+          <button type="button" role="tab" data-img="tour_book_balance.jpg" data-t="Who owes what" data-d="Customer, supplier, salesman, account-head, cash &amp; bank and stock balances - opening, debit, credit and closing."><b>09</b>Balance Summary</button>
+          <button type="button" role="tab" data-img="tour_book_gst.jpg" data-t="GST Action Centre" data-d="e-Invoice, e-Way Bill, GSTR-1, GSTR-3B, CMP-08 and GSTR-2B matching - with the bills that still need action."><b>10</b>GST</button>
+          <button type="button" role="tab" data-img="tour_book_dualbook.jpg" data-t="Dual Book - A and C" data-d="Two books in one software. Every entry is marked A or C, and reports show All, A or C. Both books open only with your Full Login Code - other users see A."><b>11</b>Dual Book</button>
+          </div>
+          <figure class="tour-view">
+            <div class="browser"><img class="tour-img" src="tour_book_dashboard.jpg" alt="NEXTACH BOOK Dashboard screen with demonstration data" loading="lazy"></div>
+            <figcaption><span class="eyebrow tour-n">Screen 01</span><h3 class="tour-t">Your business at a glance</h3><p class="tour-d">Sales, receivables, payables, cash &amp; bank and stock value - with the jobs that need attention today: e-Way Bills, reorders, cheques to deposit, pending orders.</p>
+              <button type="button" class="btn btn-line btn-sm tour-big">View larger ↗</button></figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="cty-panel" id="countries">
+        <h4>One software. <span class="hl">Five countries.</span></h4>
+        <p>Every branch follows its own country's tax rules, returns and currency - head office sees everything in one place, 24×7.</p>
     <div class="cty-grid">
       <div class="cty-card reveal"><i class="fl in"><b></b></i><h4>India</h4><span class="cur">INR · GST</span><p>e-Invoice &amp; e-Way Bill from the bill, GSTR-1, 3B and 2B matching from your own bills.</p></div>
       <div class="cty-card reveal"><i class="fl ae"></i><h4>UAE</h4><span class="cur">AED · VAT 5%</span><p>TRN on bills, zero-rated and exempt kept apart, VAT201 worked out emirate by emirate.</p></div>
@@ -196,29 +180,13 @@
       <div class="cty-card reveal"><i class="fl tz"></i><h4>Tanzania <em class="new">New</em></h4><span class="cur">TZS · VAT 18% / 15%</span><p>TIN, EFD / VFD receipt no. on every bill, monthly TRA VAT return; 15% for Zanzibar.</p></div>
       <div class="cty-card reveal"><i class="fl kw"></i><h4>Kuwait</h4><span class="cur">KWD · simple billing</span><p>Clean, simple billing with sales and purchase registers in KWD.</p></div>
     </div>
-  </div>
-</section>
-
-<!-- ============ PROBLEM → SOLUTION (14-11-2026) ============ -->
-<section class="pains" id="pains">
-  <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">NEXTACH BOOK · Problems it solves</span>
-      <h2>Less paperwork. <span class="accent">More control.</span></h2>
-      <p>The everyday headaches of running a business - and how NEXTACH takes them away.</p>
+      </div>
     </div>
-    <div class="pain-list">
-      <div class="pain reveal"><div class="p-q"><span>01 · The problem</span><h4>Handwritten bills take too long</h4><p>Every sale waits while bills are written and GST is worked out by hand.</p></div><div class="p-arrow">→</div><div class="p-a"><span>NEXTACH solution</span><h4>A GST bill in seconds</h4><p>Pick the party and products - tax, totals and HSN summary are done. Print, PDF or WhatsApp.</p></div></div>
-      <div class="pain reveal"><div class="p-q"><span>02 · The problem</span><h4>Nobody knows the real stock</h4><p>Items run out, or money sits in stock that never moves.</p></div><div class="p-arrow">→</div><div class="p-a"><span>NEXTACH solution</span><h4>Live stock, everywhere</h4><p>Shop, godown and branch stock with minimum levels and a reorder / auto PO proposal.</p></div></div>
-      <div class="pain reveal"><div class="p-q"><span>03 · The problem</span><h4>Payments get forgotten</h4><p>Who owes you, whose cheque is due, which supplier to pay - all in different registers.</p></div><div class="p-arrow">→</div><div class="p-a"><span>NEXTACH solution</span><h4>Receivables &amp; payables at a glance</h4><p>Overdue customers and suppliers on the dashboard, cheques due today, reminders on WhatsApp.</p></div></div>
-      <div class="pain reveal"><div class="p-q"><span>04 · The problem</span><h4>GST filing is a monthly panic</h4><p>Collecting bills for the CA, matching 2B, chasing e-Way Bills.</p></div><div class="p-arrow">→</div><div class="p-a"><span>NEXTACH solution</span><h4>Returns from your own bills</h4><p>GSTR-1, 3B and 2B matching, e-Invoice and e-Way Bill - or VAT returns for UAE, Kenya and Tanzania.</p></div></div>
-      <div class="pain reveal"><div class="p-q"><span>05 · The problem</span><h4>No clear picture of the business</h4><p>Totalling registers by hand at month-end, and still not sure of the profit.</p></div><div class="p-arrow">→</div><div class="p-a"><span>NEXTACH solution</span><h4>Reports in one click</h4><p>Ledgers, outstanding, stock, profit &amp; loss and balance sheet - in Excel too.</p></div></div>
-    </div>
-  </div>
-</section>
+  </section>
 
   <section class="product alt reveal" id="fee" data-product="NEXTACH FEE">
-    <div class="wrap p-in">
+    <div class="wrap">
+      <div class="p-in">
       <div class="p-text">
         <div class="p-title"><img src="product_fee.png" alt=""><div><h3>NEXTACH FEE</h3><span class="plat">Windows · coaching &amp; tuition</span></div></div>
         <p class="tagline">Admissions to Fees - Everything Under One Roof.</p>
@@ -232,12 +200,32 @@
         <p class="meta">Version 1.0.1 · 43.8 MB · Windows 10 / 11</p>
         <div class="actions"><a class="btn btn-main dl" data-file="NEXTACH_FEE_Setup_V1.0.1.exe" href="#">⬇ Download setup</a><a class="btn btn-wa act" title="WhatsApp for more information and activation"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><use href="#wa-ico"></use></svg>WhatsApp us</a><button type="button" class="btn btn-line vid" title="2-minute intro video in Hindi" data-video="video_fee.mp4" data-poster="video_fee.jpg" data-title="NEXTACH FEE">▶ Watch video</button></div>
       </div>
-      <div class="p-art"><div class="browser shots"><i></i><i></i><i></i><img class="on" src="shot_fee.jpg" alt="NEXTACH FEE dashboard" loading="lazy"><img src="shot_fee_student.jpg" alt="NEXTACH FEE student master" loading="lazy"><img src="shot_fee_receipts.jpg" alt="NEXTACH FEE fee receipts" loading="lazy"></div><div class="ph-tabs"><button type="button" class="on">Dashboard</button><button type="button">Students</button><button type="button">Receipts</button></div></div>
+      <div class="p-art"><button type="button" class="browser vid poster" data-video="video_fee.mp4" data-poster="video_fee.jpg" data-title="NEXTACH FEE" aria-label="Play the NEXTACH FEE video"><img src="video_fee.jpg" alt="NEXTACH FEE intro video" loading="lazy"><span class="play">▶</span></button><p class="p-cap">2-minute intro video in Hindi</p></div>
+      </div>
+      <div class="p-tour">
+        <h4 class="tour-head">NEXTACH FEE <span class="accent">screen by screen</span></h4>
+        <div class="tour-in">
+          <div class="tour-tabs" role="tablist" aria-label="NEXTACH FEE screens">
+          <button type="button" role="tab" class="on" data-img="tour_fee_dashboard.jpg" data-t="Every centre at a glance" data-d="Students, courses, batches, fees received and fees due for each branch, with this year against last year."><b>01</b>Dashboard</button>
+          <button type="button" role="tab" data-img="tour_fee_students.jpg" data-t="Admissions with photo" data-d="Student, parents, course, batch and payment plan in one record - the fee or its instalments are created for you."><b>02</b>Students</button>
+          <button type="button" role="tab" data-img="tour_fee_dues.jpg" data-t="Dues worked out" data-d="Full fee or instalments with due dates - see what is due, received and still pending for every student."><b>03</b>Dues</button>
+          <button type="button" role="tab" data-img="tour_fee_receipts.jpg" data-t="Receipts in seconds" data-d="Cash, UPI, cheque or bank transfer - print the receipt or send it to the parents on WhatsApp."><b>04</b>Fee Receipts</button>
+          <button type="button" role="tab" data-img="tour_fee_outstanding.jpg" data-t="Who still has to pay" data-d="Outstanding fees in one report - print, Excel, or send due reminders on WhatsApp."><b>05</b>Outstanding</button>
+          <button type="button" role="tab" data-img="tour_fee_idcards.jpg" data-t="QR ID cards" data-d="Branded ID cards with photo and QR for students, faculty and staff - the card is scanned for attendance."><b>06</b>ID Cards</button>
+          </div>
+          <figure class="tour-view">
+            <div class="browser"><img class="tour-img" src="tour_fee_dashboard.jpg" alt="NEXTACH FEE Dashboard screen with demonstration data" loading="lazy"></div>
+            <figcaption><span class="eyebrow tour-n">Screen 01</span><h3 class="tour-t">Every centre at a glance</h3><p class="tour-d">Students, courses, batches, fees received and fees due for each branch, with this year against last year.</p>
+              <button type="button" class="btn btn-line btn-sm tour-big">View larger ↗</button></figcaption>
+          </figure>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="product reveal" id="dorma" data-product="NEXTACH DORMA">
-    <div class="wrap p-in">
+    <div class="wrap">
+      <div class="p-in">
       <div class="p-text">
         <div class="p-title"><img src="product_dorma.png" alt=""><div><h3>NEXTACH DORMA</h3><span class="plat">Windows · hostels &amp; PGs</span></div></div>
         <p class="tagline">Manage Every Bed. Every Resident. Every Rupee.</p>
@@ -251,12 +239,34 @@
         <p class="meta">Version 1.0.1 · 43.4 MB · Windows 10 / 11</p>
         <div class="actions"><a class="btn btn-main dl" data-file="NEXTACH_DORMA_Setup_V1.0.1.exe" href="#">⬇ Download setup</a><a class="btn btn-wa act" title="WhatsApp for more information and activation"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><use href="#wa-ico"></use></svg>WhatsApp us</a><button type="button" class="btn btn-line vid" title="2-minute intro video in Hindi" data-video="video_dorma.mp4" data-poster="video_dorma.jpg" data-title="NEXTACH DORMA">▶ Watch video</button></div>
       </div>
-      <div class="p-art"><div class="browser shots"><i></i><i></i><i></i><img class="on" src="shot_dorma.jpg" alt="NEXTACH DORMA dashboard" loading="lazy"><img src="shot_dorma_beds.jpg" alt="NEXTACH DORMA bed availability" loading="lazy"><img src="shot_dorma_occupancy.jpg" alt="NEXTACH DORMA bed occupancy chart" loading="lazy"></div><div class="ph-tabs"><button type="button" class="on">Dashboard</button><button type="button">Bed Availability</button><button type="button">Occupancy</button></div></div>
+      <div class="p-art"><button type="button" class="browser vid poster" data-video="video_dorma.mp4" data-poster="video_dorma.jpg" data-title="NEXTACH DORMA" aria-label="Play the NEXTACH DORMA video"><img src="video_dorma.jpg" alt="NEXTACH DORMA intro video" loading="lazy"><span class="play">▶</span></button><p class="p-cap">2-minute intro video in Hindi</p></div>
+      </div>
+      <div class="p-tour">
+        <h4 class="tour-head">NEXTACH DORMA <span class="accent">screen by screen</span></h4>
+        <div class="tour-in">
+          <div class="tour-tabs" role="tablist" aria-label="NEXTACH DORMA screens">
+          <button type="button" role="tab" class="on" data-img="tour_dorma_dashboard.jpg" data-t="Every property, every bed" data-d="Total, occupied, vacant and on-notice beds for each property, rent due and received, cash and bank."><b>01</b>Dashboard</button>
+          <button type="button" role="tab" data-img="tour_dorma_beds.jpg" data-t="Vacant beds and brochure" data-d="Vacant beds with photos, rent and deposit - send a WhatsApp brochure to an enquiry in one click."><b>02</b>Bed Availability</button>
+          <button type="button" role="tab" data-img="tour_dorma_occupancy.jpg" data-t="The whole hostel in one chart" data-d="Room by room, bed by bed: who stays where, and which beds are free."><b>03</b>Bed Chart</button>
+          <button type="button" role="tab" data-img="tour_dorma_residents.jpg" data-t="Every resident&#x27;s record" data-d="Contact, room / bed, rent, joining date and status - profile, ledger and WhatsApp from the row."><b>04</b>Residents</button>
+          <button type="button" role="tab" data-img="tour_dorma_enquiries.jpg" data-t="Enquiry to admission" data-d="Follow up every enquiry, send beds and brochure, and admit with one click."><b>05</b>Enquiries</button>
+          <button type="button" role="tab" data-img="tour_dorma_admission.jpg" data-t="Admission with KYC" data-d="Personal details, ID proof, guardian and agreement - the agreement PDF is made for you."><b>06</b>Admission</button>
+          <button type="button" role="tab" data-img="tour_dorma_outstanding.jpg" data-t="Rent that is still due" data-d="Outstanding dues for every resident - with WhatsApp reminders from the list."><b>07</b>Outstanding</button>
+          <button type="button" role="tab" data-img="tour_dorma_pl.jpg" data-t="Full accounts" data-d="Rent and mess income against electricity, food, staff and other expenses - profit &amp; loss and balance sheet."><b>08</b>Profit &amp; Loss</button>
+          </div>
+          <figure class="tour-view">
+            <div class="browser"><img class="tour-img" src="tour_dorma_dashboard.jpg" alt="NEXTACH DORMA Dashboard screen with demonstration data" loading="lazy"></div>
+            <figcaption><span class="eyebrow tour-n">Screen 01</span><h3 class="tour-t">Every property, every bed</h3><p class="tour-d">Total, occupied, vacant and on-notice beds for each property, rent due and received, cash and bank.</p>
+              <button type="button" class="btn btn-line btn-sm tour-big">View larger ↗</button></figcaption>
+          </figure>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="product alt reveal" id="punch" data-product="NEXTACH PUNCH">
-    <div class="wrap p-in">
+    <div class="wrap">
+      <div class="p-in">
       <div class="p-text">
         <div class="p-title"><img src="product_punch.png" alt=""><div><h3>NEXTACH PUNCH <em class="new">New</em></h3><span class="plat">Android phone or tablet</span></div></div>
         <p class="tagline">Attendance &amp; payroll in your pocket.</p>
@@ -270,15 +280,25 @@
         <p class="meta">Version 1.0.1 · 88.1 MB · Android 9 or newer</p>
         <div class="actions"><a class="btn btn-main dl" data-file="NEXTACH_PUNCH_V1.0.1.apk" href="#">⬇ Download APK</a><a class="btn btn-wa act" title="WhatsApp for more information and activation"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><use href="#wa-ico"></use></svg>WhatsApp us</a><button type="button" class="btn btn-line vid" title="2-minute intro video in Hindi" data-video="video_punch.mp4" data-poster="video_punch.jpg" data-title="NEXTACH PUNCH">▶ Watch video</button></div>
       </div>
-      <div class="p-art">
-        <div class="phone">
-          <div class="screen shots">
-            <img class="on" src="punch_home.jpg" alt="NEXTACH PUNCH home screen" loading="lazy">
-            <img src="punch_attendance.jpg" alt="NEXTACH PUNCH attendance screen" loading="lazy">
-            <img src="punch_reports.jpg" alt="NEXTACH PUNCH reports screen" loading="lazy">
+      <div class="p-art"><button type="button" class="browser vid poster" data-video="video_punch.mp4" data-poster="video_punch.jpg" data-title="NEXTACH PUNCH" aria-label="Play the NEXTACH PUNCH video"><img src="video_punch.jpg" alt="NEXTACH PUNCH intro video" loading="lazy"><span class="play">▶</span></button><p class="p-cap">2-minute intro video in Hindi</p></div>
+      </div>
+      <div class="p-tour p-tour-phone">
+        <h4 class="tour-head">NEXTACH PUNCH <span class="accent">screen by screen</span></h4>
+        <div class="tour-in">
+          <div class="tour-tabs" role="tablist" aria-label="NEXTACH PUNCH screens">
+          <button type="button" role="tab" class="on" data-img="tour_punch_home.jpg" data-t="Today at a glance" data-d="Present, absent, late and on leave - live, with the latest punches."><b>01</b>Home</button>
+          <button type="button" role="tab" data-img="tour_punch_attendance.jpg" data-t="In, out, hours and overtime" data-d="Every employee&#x27;s in and out time, hours worked, late, early and overtime - worked out from the shift."><b>02</b>Attendance</button>
+          <button type="button" role="tab" data-img="tour_punch_staff.jpg" data-t="Staff master" data-d="Department, shift and overtime rule for every employee - with photo and face for the kiosk."><b>03</b>Staff</button>
+          <button type="button" role="tab" data-img="tour_punch_idcard.jpg" data-t="ID cards with QR" data-d="Company logo, photo and QR - make a PDF of all cards and print."><b>04</b>ID Cards</button>
+          <button type="button" role="tab" data-img="tour_punch_reports.jpg" data-t="Every report ready" data-d="Daily attendance, monthly muster, paid days, late coming, early going, half day and overtime."><b>05</b>Reports</button>
+          <button type="button" role="tab" data-img="tour_punch_muster.jpg" data-t="Monthly muster" data-d="Present, leave and week-off for the whole month - PDF, Excel or WhatsApp."><b>06</b>Monthly Muster</button>
           </div>
+          <figure class="tour-view">
+            <div class="phone"><div class="screen"><img class="tour-img" src="tour_punch_home.jpg" alt="NEXTACH PUNCH Home screen with demonstration data" loading="lazy"></div></div>
+            <figcaption><span class="eyebrow tour-n">Screen 01</span><h3 class="tour-t">Today at a glance</h3><p class="tour-d">Present, absent, late and on leave - live, with the latest punches.</p>
+              <button type="button" class="btn btn-line btn-sm tour-big">View larger ↗</button></figcaption>
+          </figure>
         </div>
-        <div class="ph-tabs"><button type="button" class="on">Home</button><button type="button">Attendance</button><button type="button">Reports</button></div>
       </div>
     </div>
   </section>
@@ -416,6 +436,6 @@ e4a0945144dfdd618491920127e68a970de5e929524274493c0eb3f5ad77d35d  NEXTACH_FEE_Se
   <button type="button" class="ask-btn ask-open" aria-controls="ask-panel" aria-expanded="false"><svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><use href="#wa-ico"></use></svg>Ask us</button>
 </aside>
 
-<script src="site.js?v=6a874ec8"></script>
+<script src="site.js?v=fbe4b580"></script>
 </body>
 </html>
