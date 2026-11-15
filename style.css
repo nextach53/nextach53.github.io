@@ -337,3 +337,38 @@ code { background: var(--bg2); padding: 1px 6px; border-radius: 5px; font-size: 
 .p-text .actions .btn { width: 100%; min-height: 52px; padding: 10px; font: 600 14.5px/1.2 Inter, "Segoe UI", sans-serif;
   white-space: normal; text-align: center; }
 @media (max-width: 560px) { .p-text .actions { grid-template-columns: 1fr; } }
+
+/* ---------- 15-11-2026: page order like a product site - product switcher, BOOK video frame, footer columns ---------- */
+.biz { padding-top: 72px; }
+.prod-head { margin-bottom: 0; }
+.prod-jump { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 30px; margin-bottom: 10px; }
+.prod-jump a { display: grid; grid-template-columns: 52px 1fr; grid-template-rows: auto auto; column-gap: 12px; align-items: center;
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 14px 16px; text-decoration: none; color: var(--navy);
+  transition: transform .2s, box-shadow .2s, border-color .2s; }
+.prod-jump a:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--gold); }
+.prod-jump img { grid-row: 1 / 3; width: 52px; height: 52px; object-fit: contain; background: #fff; border-radius: 12px; }
+.prod-jump b { font: 800 17px Poppins, sans-serif; letter-spacing: .5px; }
+.prod-jump small { color: var(--muted); font-size: 13.5px; }
+.browser.poster { display: block; width: 100%; cursor: pointer; font: inherit; text-align: left; }
+.browser.poster img { width: 100%; }
+.browser.poster .play { position: absolute; left: 50%; top: calc(50% + 11px); transform: translate(-50%, -50%); width: 78px; height: 78px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 30px; color: var(--ink); padding-left: 6px;
+  background: linear-gradient(135deg, var(--gold2), var(--gold)); box-shadow: 0 12px 30px -8px rgba(0,0,0,.5); transition: transform .15s; }
+.browser.poster:hover .play { transform: translate(-50%, -50%) scale(1.08); }
+.p-cap { text-align: center; color: var(--muted); font-size: 14px; margin: 12px 0 0; }
+.foot { padding: 48px 0 24px; background: var(--navy); color: #C7D2E1; border-top: 0; }
+.foot a { color: #C7D2E1; text-decoration: none; }
+.foot a:hover { color: var(--gold2); }
+.foot-grid { display: grid; grid-template-columns: 1.6fr repeat(4, 1fr); gap: 28px; }
+.foot-grid h5 { margin: 4px 0 12px; color: #fff; font: 700 15px Poppins, sans-serif; }
+.foot-grid div > a, .foot-grid div > span { display: block; margin: 0 0 8px; font-size: 14px; }
+.f-brand p { margin: 12px 0 0; font-size: 14px; max-width: 280px; }
+.foot .logo img { width: 34px; height: 34px; }
+.foot-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-top: 34px; padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,.14); font-size: 13px; }
+@media (max-width: 900px) { .prod-jump { grid-template-columns: 1fr 1fr; } .foot-grid { grid-template-columns: 1fr 1fr; } .f-brand { grid-column: 1 / -1; } }
+@media (max-width: 560px) { .prod-jump a { padding: 12px; grid-template-columns: 42px 1fr; } .prod-jump img { width: 42px; height: 42px; } }
+@media (max-width: 1000px) { .links a[href="#tour"] { display: none; } }
+@media (max-width: 800px) { .links a[href="#why"], .links a[href="#faq"], .links a[href="#contact"] { display: none; } }
+.referral { padding-top: 72px; }
+.foot-grid .f-brand > a.logo { display: flex; }
