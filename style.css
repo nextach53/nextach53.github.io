@@ -372,3 +372,32 @@ code { background: var(--bg2); padding: 1px 6px; border-radius: 5px; font-size: 
 @media (max-width: 800px) { .links a[href="#why"], .links a[href="#faq"], .links a[href="#contact"] { display: none; } }
 .referral { padding-top: 72px; }
 .foot-grid .f-brand > a.logo { display: flex; }
+
+/* ---------- 15-11-2026 (2): one section per product - text + video, then its screen tour (BOOK: + countries) ---------- */
+.product { padding: 64px 0; }
+.product .p-in { margin-bottom: 8px; }
+.p-tour { margin-top: 44px; padding-top: 34px; border-top: 1px solid var(--line); }
+.tour-head { text-align: center; font-size: clamp(20px, 2.4vw, 26px); margin: 0 0 22px; }
+.p-tour .tour-in { margin-top: 0; }
+.p-tour .tour-tabs button:not(.on) { background: var(--card); }
+.product.alt .p-tour .tour-tabs button:not(.on) { background: #fff; }
+.p-tour-phone .tour-in { grid-template-columns: 230px 1fr; }
+.p-tour-phone .tour-view { display: grid; grid-template-columns: 300px 1fr; gap: 34px; align-items: center; }
+.p-tour-phone .phone { width: 300px; margin: 0; }
+.p-tour-phone .screen { padding: 0; aspect-ratio: 720 / 1471; height: auto; background: #F7F4EC; }
+.p-tour-phone .screen img { width: 100%; height: 100%; object-fit: contain; object-position: top; }
+.p-tour-phone figcaption { margin-top: 0; }
+.browser.poster { padding: 8px; }
+.browser.poster i { display: none; }
+.cty-panel { margin-top: 44px; padding: 34px 30px; border-radius: 22px; color: #fff; text-align: center;
+  background: radial-gradient(700px 300px at 10% 0%, #3A5A8C 0%, transparent 60%), linear-gradient(160deg, var(--navy) 0%, #162641 100%); }
+.cty-panel h4 { color: #fff; font-size: clamp(22px, 2.6vw, 30px); }
+.cty-panel > p { color: #C7D2E1; max-width: 640px; margin: 8px auto 0; }
+.cty-panel .cty-grid { margin-top: 24px; text-align: left; }
+@media (max-width: 900px) {
+  .p-tour-phone .tour-in { grid-template-columns: 1fr; }
+  .p-tour-phone .tour-view { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  .p-tour-phone .phone { width: 260px; }
+}
+@media (max-width: 560px) { .cty-panel { padding: 26px 16px; } }
+.p-tour .browser { padding: 8px; }
