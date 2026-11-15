@@ -37,23 +37,29 @@ document.querySelectorAll(".wa-refer").forEach(function (a) {
   external(a);
 });
 
-// 14-11-2026: BOOK tour - a numbered tab shows its real screen; "View larger" opens it full size
-(function () {
-  var img = document.getElementById("tour-img");
-  if (!img) return;
-  var tabs = document.querySelectorAll(".tour-tabs button");
+// 14-11-2026 / 15-11-2026: screen tour inside every product - a numbered tab shows its real screen; "View larger" opens it
+document.querySelectorAll(".p-tour").forEach(function (tour) {
+  var img = tour.querySelector(".tour-img"), tabs = tour.querySelectorAll(".tour-tabs button"), loaded = false;
+  var name = tour.closest("[data-product]").getAttribute("data-product");
+  function preload() {        // the other screens load once this tour is near, so a tab switches at once
+    if (loaded) return; loaded = true;
+    tabs.forEach(function (b) { new Image().src = b.getAttribute("data-img"); });
+  }
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (e) { if (e[0].isIntersecting) { preload(); io.disconnect(); } }, { rootMargin: "300px" });
+    io.observe(tour);
+  } else preload();
   tabs.forEach(function (b, k) {
-    new Image().src = b.getAttribute("data-img");   // load all screens early so the switch is instant
     b.addEventListener("click", function () {
       tabs.forEach(function (t) { t.classList.toggle("on", t === b); t.setAttribute("aria-selected", t === b); });
       img.src = b.getAttribute("data-img");
-      img.alt = "NEXTACH BOOK " + b.lastChild.textContent + " screen with demonstration data";
-      document.getElementById("tour-n").textContent = "Screen " + ("0" + (k + 1)).slice(-2);
-      document.getElementById("tour-t").textContent = b.getAttribute("data-t");
-      document.getElementById("tour-d").textContent = b.getAttribute("data-d");
+      img.alt = name + " " + b.lastChild.textContent + " screen with demonstration data";
+      tour.querySelector(".tour-n").textContent = "Screen " + ("0" + (k + 1)).slice(-2);
+      tour.querySelector(".tour-t").textContent = b.getAttribute("data-t");
+      tour.querySelector(".tour-d").textContent = b.getAttribute("data-d");
     });
   });
-  document.getElementById("tour-big").addEventListener("click", function () {
+  tour.querySelector(".tour-big").addEventListener("click", function () {
     var box = document.createElement("div");
     box.className = "zoom";
     box.innerHTML = '<img alt=""><span>×</span>';
@@ -62,7 +68,7 @@ document.querySelectorAll(".wa-refer").forEach(function (a) {
     box.addEventListener("click", function () { box.remove(); });
     document.body.appendChild(box);
   });
-})();
+});
 
 // 15-11-2026: "Watch the video" - the product's Hindi intro video plays in a full-screen box (loaded only when asked)
 document.querySelectorAll(".vid[data-video]").forEach(function (b) {
