@@ -32,13 +32,13 @@
     },
     {"@type": "WebSite", "@id": "https://nextach.in/#site", "url": "https://nextach.in/", "name": "NEXTACH", "publisher": {"@id": "https://nextach.in/#org"}},
     {"@type": "SoftwareApplication", "name": "NEXTACH BOOK", "url": "https://nextach.in/#book", "applicationCategory": "BusinessApplication", "operatingSystem": "Windows",
-     "description": "Accounts & inventory management for supermarkets, wholesalers, distributors, dealers and manufacturers: GST billing, e-Invoice and e-Way Bill, VAT for UAE, Kenya, Tanzania and Kuwait, branches and multi-currency.", "publisher": {"@id": "https://nextach.in/#org"}},
+     "description": "Accounts & inventory management for supermarkets, wholesalers, distributors, dealers and manufacturers: GST billing, e-Invoice and e-Way Bill, VAT for UAE, Kenya, Tanzania and Kuwait, branches and multi-currency.", "publisher": {"@id": "https://nextach.in/#org"}, "offers": {"@type": "Offer", "price": "7500", "priceCurrency": "INR"}},
     {"@type": "SoftwareApplication", "name": "NEXTACH FEE", "url": "https://nextach.in/#fee", "applicationCategory": "BusinessApplication", "operatingSystem": "Windows",
-     "description": "Tutorial and coaching institute management: students, batches, fees, receipts and reminders.", "publisher": {"@id": "https://nextach.in/#org"}},
+     "description": "Tutorial and coaching institute management: students, batches, fees, receipts and reminders.", "publisher": {"@id": "https://nextach.in/#org"}, "offers": {"@type": "Offer", "price": "5000", "priceCurrency": "INR"}},
     {"@type": "SoftwareApplication", "name": "NEXTACH DORMA", "url": "https://nextach.in/#dorma", "applicationCategory": "BusinessApplication", "operatingSystem": "Windows",
-     "description": "Hostel and PG management: rooms, beds, occupancy, rent and receipts.", "publisher": {"@id": "https://nextach.in/#org"}},
+     "description": "Hostel and PG management: rooms, beds, occupancy, rent and receipts.", "publisher": {"@id": "https://nextach.in/#org"}, "offers": {"@type": "Offer", "price": "5000", "priceCurrency": "INR"}},
     {"@type": "SoftwareApplication", "name": "NEXTACH PUNCH", "url": "https://nextach.in/#punch", "applicationCategory": "BusinessApplication", "operatingSystem": "Android",
-     "description": "Staff attendance and payroll app for factories, shops, offices, schools and hospitals.", "publisher": {"@id": "https://nextach.in/#org"}}
+     "description": "Staff attendance and payroll app for factories, shops, offices, schools and hospitals.", "publisher": {"@id": "https://nextach.in/#org"}, "offers": {"@type": "Offer", "price": "5000", "priceCurrency": "INR"}}
   ]
 }
 </script>
@@ -47,7 +47,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=baf2cea6">
+<link rel="stylesheet" href="style.css?v=4ee675c0">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa-ico" viewBox="0 0 32 32"><path fill="#fff" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.4 10.4 0 0 1-1.8-5.7C5 9.9 9.9 5.2 16 5.2s11 4.7 11 10.6-4.9 10.6-11 10.6zm6-7.9c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.7-1.6-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6.3-.5c.1-.2 0-.4 0-.6l-1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.1-.3-.2-.7-.4z"/></symbol></svg>
@@ -82,6 +82,7 @@
         <li><b>4</b> products</li>
         <li><b>5</b> countries</li>
         <li><b>100%</b> offline data</li>
+        <li><b>₹5,000</b> one-time</li>
         <li><b>Free</b> trial</li>
         <li><b>WhatsApp</b> support</li>
       </ul>
@@ -122,11 +123,12 @@
     <p>Each product works on its own: download the free trial, try it with your own data, and activate on WhatsApp when you are happy.</p>
   </div>
   <nav class="wrap prod-jump reveal" aria-label="Products">
-    <a href="#book"><img src="product_book.png" alt=""><b>BOOK</b><small>Accounts &amp; inventory</small></a>
-    <a href="#fee"><img src="product_fee.png" alt=""><b>FEE</b><small>Coaching institutes</small></a>
-    <a href="#dorma"><img src="product_dorma.png" alt=""><b>DORMA</b><small>Hostels &amp; PGs</small></a>
-    <a href="#punch"><img src="product_punch.png" alt=""><b>PUNCH</b><small>Staff attendance</small></a>
+    <a href="#book"><img src="product_book.png" alt=""><b>BOOK</b><small>Accounts &amp; inventory<span class="pf">from ₹7,500</span></small></a>
+    <a href="#fee"><img src="product_fee.png" alt=""><b>FEE</b><small>Coaching institutes<span class="pf">from ₹5,000</span></small></a>
+    <a href="#dorma"><img src="product_dorma.png" alt=""><b>DORMA</b><small>Hostels &amp; PGs<span class="pf">from ₹5,000</span></small></a>
+    <a href="#punch"><img src="product_punch.png" alt=""><b>PUNCH</b><small>Staff attendance<span class="pf">from ₹5,000</span></small></a>
   </nav>
+  <p class="wrap price-note reveal">Software: one-time price, no monthly fee. Yearly setup: company + 1 Admin + 2 users ₹1,499 · extra user ₹249 · branch ₹999 · PUNCH 5 employees ₹499. Taxes extra · <a class="wa-help" href="#">WhatsApp us for today's offer</a></p>
 
   <section class="product reveal" id="book" data-product="NEXTACH BOOK">
     <div class="wrap">
@@ -142,6 +144,7 @@
           <li>Multi-currency with daily exchange rates · backup on your PC and Google Drive</li>
           <li>Dual Book: A and C books in one software, both open only with your Full Login Code</li>
         </ul>
+        <p class="price"><span class="now">₹7,500</span><s>₹14,999</s><span class="once">one-time · lifetime licence · per computer</span></p>
         <p class="meta">Version 1.0.1 · 46.9 MB · Windows 10 / 11</p>
         <div class="actions"><a class="btn btn-main dl" data-file="NEXTACH_BOOK_Setup_V1.0.1.exe" href="#">⬇ Download setup</a><a class="btn btn-wa act" title="WhatsApp for more information and activation"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><use href="#wa-ico"></use></svg>WhatsApp us</a><button type="button" class="btn btn-line vid" title="2-minute intro video in Hindi" data-video="video_book.mp4" data-poster="video_book.jpg" data-title="NEXTACH BOOK">▶ Watch video</button></div>
       </div>
@@ -197,6 +200,7 @@
           <li>QR attendance &amp; branded ID cards</li>
           <li>Built-in accounts, branches, users &amp; rights</li>
         </ul>
+        <p class="price"><span class="now">₹5,000</span><s>₹9,999</s><span class="once">one-time · lifetime licence · per computer</span></p>
         <p class="meta">Version 1.0.1 · 43.8 MB · Windows 10 / 11</p>
         <div class="actions"><a class="btn btn-main dl" data-file="NEXTACH_FEE_Setup_V1.0.1.exe" href="#">⬇ Download setup</a><a class="btn btn-wa act" title="WhatsApp for more information and activation"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><use href="#wa-ico"></use></svg>WhatsApp us</a><button type="button" class="btn btn-line vid" title="2-minute intro video in Hindi" data-video="video_fee.mp4" data-poster="video_fee.jpg" data-title="NEXTACH FEE">▶ Watch video</button></div>
       </div>
@@ -236,6 +240,7 @@
           <li>Monthly dues in one click &amp; reminders</li>
           <li>Check-out, deposit refund &amp; full accounts</li>
         </ul>
+        <p class="price"><span class="now">₹5,000</span><s>₹9,999</s><span class="once">one-time · lifetime licence · per computer</span></p>
         <p class="meta">Version 1.0.1 · 43.4 MB · Windows 10 / 11</p>
         <div class="actions"><a class="btn btn-main dl" data-file="NEXTACH_DORMA_Setup_V1.0.1.exe" href="#">⬇ Download setup</a><a class="btn btn-wa act" title="WhatsApp for more information and activation"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><use href="#wa-ico"></use></svg>WhatsApp us</a><button type="button" class="btn btn-line vid" title="2-minute intro video in Hindi" data-video="video_dorma.mp4" data-poster="video_dorma.jpg" data-title="NEXTACH DORMA">▶ Watch video</button></div>
       </div>
@@ -277,6 +282,7 @@
           <li>Leave types, balances &amp; ID cards</li>
           <li>Reports as PDF, Excel or WhatsApp · Google Drive backup</li>
         </ul>
+        <p class="price"><span class="now">₹5,000</span><s>₹9,999</s><span class="once">one-time · lifetime licence · per phone</span></p>
         <p class="meta">Version 1.0.1 · 88.1 MB · Android 9 or newer</p>
         <div class="actions"><a class="btn btn-main dl" data-file="NEXTACH_PUNCH_V1.0.1.apk" href="#">⬇ Download APK</a><a class="btn btn-wa act" title="WhatsApp for more information and activation"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><use href="#wa-ico"></use></svg>WhatsApp us</a><button type="button" class="btn btn-line vid" title="2-minute intro video in Hindi" data-video="video_punch.mp4" data-poster="video_punch.jpg" data-title="NEXTACH PUNCH">▶ Watch video</button></div>
       </div>
@@ -379,7 +385,7 @@ e4a0945144dfdd618491920127e68a970de5e929524274493c0eb3f5ad77d35d  NEXTACH_FEE_Se
     </div>
     <div class="faq-list reveal">
       <details open><summary>How does the free trial work?</summary><p>Download the setup and install it - the trial starts right away with 1 branch, 1 Admin and 2 Users. Activate only when you are happy with it.</p></details>
-      <details><summary>Is there a monthly fee?</summary><p>No. The software is bought once per computer (PUNCH: per phone). Company, user and branch setups are yearly. WhatsApp us for today's price and offer.</p></details>
+      <details><summary>Is there a monthly fee? What does it cost?</summary><p>No monthly fee. The software is a one-time, lifetime purchase: BOOK ₹7,500, FEE ₹5,000, DORMA ₹5,000 per computer and PUNCH ₹5,000 per phone. The company and user setup is yearly - ₹1,499 for 1 company, 1 Admin and 2 users (extra user ₹249, branch ₹999). Taxes extra. WhatsApp us for today's offer.</p></details>
       <details><summary>Can I use it without internet?</summary><p>Yes. Daily billing, stock and accounts work on your own computer without internet. Internet is only needed for WhatsApp sending, Google Drive backup, exchange rates and branches working over the Internet.</p></details>
       <details><summary>Where is my data kept? Is it safe?</summary><p>On your own computer or phone - not on our servers. Backups go to your PC and, if you like, your own Google Drive.</p></details>
       <details><summary>Will an update delete my data?</summary><p>Never. Updates keep all your data, and a backup is taken before every update.</p></details>
