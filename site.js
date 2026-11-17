@@ -19,6 +19,14 @@ var DL = "https://github.com/nextach53/nextach53.github.io/releases/download/ins
 document.querySelectorAll("a.dl[data-file]").forEach(function (a) {
   a.href = DL + encodeURIComponent(a.getAttribute("data-file"));
   a.setAttribute("download", "");
+  // 17-11-2026: count the download in NEXTACH Super Admin (file, page; country and device are added there - no IP kept).
+  // The file itself still comes straight from GitHub, so a download never waits for or depends on this count.
+  a.addEventListener("click", function () {
+    try {
+      var body = JSON.stringify({ file: a.getAttribute("data-file"), page: location.pathname + location.search + location.hash });   // ?update=1 = update message link
+      if (navigator.sendBeacon) navigator.sendBeacon("https://checkin.nextach.in/api/dl", new Blob([body], { type: "text/plain" }));
+    } catch (e) {}
+  });
 });
 
 document.querySelectorAll(".wa-help").forEach(function (a) {
