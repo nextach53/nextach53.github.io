@@ -409,3 +409,8 @@ code { background: var(--bg2); padding: 1px 6px; border-radius: 5px; font-size: 
 .price .once { flex-basis: 100%; color: var(--teal); font-weight: 600; font-size: 14px; }
 .price-note { text-align: center; color: var(--muted); font-size: 14px; margin-top: 16px; margin-bottom: 0; }
 .prod-jump small .pf { display: block; color: var(--copper); font-weight: 700; font-size: 14px; }
+
+/* 18-11-2026: BOOK has two screen tours - 1 India / GST, 2 branches in other countries */
+.tour-k { display: inline-block; font: 700 12px Poppins, sans-serif; letter-spacing: .06em; text-transform: uppercase; color: #fff;
+  background: linear-gradient(135deg, var(--navy2), var(--navy)); border-radius: 999px; padding: 4px 12px; margin-right: 8px; vertical-align: middle; }
+.p-tour-world { margin-top: 46px; }
