@@ -26,8 +26,47 @@ document.querySelectorAll("a.dl[data-file]").forEach(function (a) {
       var body = JSON.stringify({ file: a.getAttribute("data-file"), page: location.pathname + location.search + location.hash });   // ?update=1 = update message link
       if (navigator.sendBeacon) navigator.sendBeacon("https://checkin.nextach.in/api/dl", new Blob([body], { type: "text/plain" }));
     } catch (e) {}
+    installHelp(a.getAttribute("data-file"), (a.closest("[data-product]") || a).getAttribute("data-product") || "NEXTACH");
   });
 });
+
+// 19-11-2026: the download goes on; this box explains the warnings Windows / Android show for new software, so a customer
+// does not think the setup is unsafe and stop. Windows steps for the .exe, Android steps for the .apk.
+function installHelp(file, name) {
+  var apk = /\.apk$/i.test(file || "");
+  var steps = apk ? [
+    ["Chrome says “File might be harmful”", "Tap <b>Download anyway</b>. Chrome says this for every app that is not from the Play Store."],
+    ["“Not allowed to install unknown apps”", "Tap <b>Settings</b> → turn on <b>Allow from this source</b> → go back → tap <b>Install</b>."],
+    ["Play Protect: “Unsafe app blocked” / “Scan app”", "Tap <b>More details</b> → <b>Install anyway</b> (or <b>Scan app</b>, then <b>Install</b>). Our app is new, so Google does not know it yet."],
+    ["Updating the app?", "Install it over the old one - <b>do not uninstall</b> the old app first, that deletes the data on the phone."]
+  ] : [
+    ["Browser: “not commonly downloaded”", "Edge / Chrome: click <b>⋯</b> next to the file → <b>Keep</b> → <b>Keep anyway</b>."],
+    ["Blue box: “Windows protected your PC”", "Click <b>More info</b> → <b>Run anyway</b>. Windows shows this for every new program it has not seen often yet."],
+    ["“Smart App Control blocked part of this app”", "Windows 11 cannot be told to skip this one. Just WhatsApp us - we install it for you, free, by remote connection."],
+    ["Your antivirus asks", "Choose <b>Allow</b> / <b>Trust</b>. Updating? Install in the <b>same folder</b> as before - your data stays."]
+  ];
+  var box = document.createElement("div");
+  box.className = "zoom ibox";
+  box.innerHTML = '<div class="ib-card" role="dialog" aria-modal="true" aria-labelledby="ib-t">'
+    + '<button type="button" class="ib-x" aria-label="Close">×</button>'
+    + '<p class="ib-ok">✅ Your download of <b></b> has started</p>'
+    + '<h3 id="ib-t">' + (apk ? "Installing on your Android phone" : "Installing on your Windows PC") + '</h3>'
+    + '<p class="ib-why">NEXTACH ' + (apk ? "apps are" : "software is") + ' new, so ' + (apk ? "Android" : "Windows")
+    + ' may show a warning. <b>This is normal and safe</b> - the file comes straight from our official site nextach.in. Here is what to tap:</p>'
+    + '<ol class="ib-steps">' + steps.map(function (s) { return "<li><b>" + s[0] + "</b><span>" + s[1] + "</span></li>"; }).join("") + "</ol>"
+    + '<p class="ib-safe">🔒 Download NEXTACH only from <b>nextach.in</b> or from our WhatsApp. Stuck at any step? We help you install it.</p>'
+    + '<div class="ib-act"><a class="btn btn-wa ib-wa">WhatsApp us for help</a><button type="button" class="btn btn-main ib-close">OK, got it</button></div></div>';
+  box.querySelector(".ib-ok b").textContent = name;
+  var wa = box.querySelector(".ib-wa");
+  wa.href = waLink("Hello NEXTACH, I need help installing " + name + " (" + (file || "") + ").");
+  external(wa);
+  function close() { box.remove(); }
+  box.addEventListener("click", function (e) { if (e.target === box) close(); });
+  box.querySelector(".ib-x").addEventListener("click", close);
+  box.querySelector(".ib-close").addEventListener("click", close);
+  document.body.appendChild(box);
+  box.querySelector(".ib-close").focus({ preventScroll: true });
+}
 
 document.querySelectorAll(".wa-help").forEach(function (a) {
   a.href = waLink("Hello NEXTACH, I would like to know more about your software.");
