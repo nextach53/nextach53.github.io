@@ -91,6 +91,10 @@ main#products { padding-top: 70px; }
 .meta { color: var(--muted) !important; font-size: 13px; margin: 0 0 16px; }
 .actions { display: flex; flex-wrap: nowrap; gap: 10px; }
 .actions .btn { padding: 11px 16px; font-size: 14.5px; }
+/* 20-11-2026 PUNCH Wave: employees' phone app, a small download line under the PUNCH buttons */
+.wave-dl { margin: 14px 0 0; padding: 12px 14px; border: 1px dashed var(--line); border-radius: 12px; background: var(--card); font-size: 13.5px; color: var(--muted); }
+.wave-dl b { color: var(--teal); }
+.wave-dl a.dl { font-weight: 700; white-space: nowrap; }
 .browser { position: relative; background: #fff; border-radius: 14px; padding: 30px 8px 8px; box-shadow: var(--shadow); border: 1px solid var(--line); }
 .browser i { position: absolute; top: 11px; width: 10px; height: 10px; border-radius: 50%; background: #F26B5B; }
 .browser i:nth-child(1) { left: 14px; } .browser i:nth-child(2) { left: 30px; background: #F5B521; } .browser i:nth-child(3) { left: 46px; background: #3CC66A; }
