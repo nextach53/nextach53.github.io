@@ -2,32 +2,34 @@
  "products": {
   "BOOK": {
    "file": "NEXTACH_BOOK_Setup_V1.0.1.exe",
-   "updated": "2026-11-20T17:54:58",
+   "updated": "2026-11-21T01:44:03",
    "version": "1.0.1"
   },
   "DORMA": {
+   "built": "2026-11-21T00:53:53",
    "file": "NEXTACH_DORMA_Setup_V1.0.1.exe",
-   "updated": "2026-11-20T17:47:06",
+   "updated": "2026-11-21T01:28:18",
    "version": "1.0.1"
   },
   "FEE": {
+   "built": "2026-11-21T00:53:53",
    "file": "NEXTACH_FEE_Setup_V1.0.1.exe",
-   "updated": "2026-11-20T17:51:02",
+   "updated": "2026-11-21T01:42:55",
    "version": "1.0.1"
   },
   "PUNCH": {
-   "built": "2026-11-21T01:01:28",
-   "code": 24,
-   "file": "NEXTACH_PUNCH_V1.0.1.apk",
-   "updated": "2026-11-21T00:59:56",
-   "version": "1.0.1"
+   "built": "2026-11-21T01:51:31",
+   "code": 25,
+   "file": "NEXTACH_PUNCH_V1.0.5.apk",
+   "updated": "2026-11-21T01:50:25",
+   "version": "1.0.5"
   },
   "PUNCH_WAVE": {
-   "built": "2026-11-21T01:01:29",
-   "code": 1,
-   "file": "NEXTACH_PUNCH_WAVE_V1.0.1.apk",
-   "updated": "2026-11-21T01:01:24",
-   "version": "1.0.1"
+   "built": "2026-11-21T01:51:33",
+   "code": 2,
+   "file": "NEXTACH_PUNCH_WAVE_V1.0.5.apk",
+   "updated": "2026-11-21T01:51:28",
+   "version": "1.0.5"
   }
  }
 }
