@@ -444,3 +444,13 @@ code { background: var(--bg2); padding: 1px 6px; border-radius: 5px; font-size: 
 .tour-k { display: inline-block; font: 700 12px Poppins, sans-serif; letter-spacing: .06em; text-transform: uppercase; color: #fff;
   background: linear-gradient(135deg, var(--navy2), var(--navy)); border-radius: 999px; padding: 4px 12px; margin-right: 8px; vertical-align: middle; }
 .p-tour-world { margin-top: 46px; }
+
+/* 22-11-2026: product buttons on top - BOOK / FEE / DORMA / PUNCH, always visible in the sticky header */
+html { scroll-padding-top: 116px; }
+.prod-bar { border-top: 1px solid rgba(255,255,255,.10); }
+.prod-bar-in { display: flex; justify-content: center; gap: 10px; padding: 7px 0; }
+.prod-bar a { display: inline-flex; align-items: center; gap: 7px; padding: 5px 14px 5px 6px; border-radius: 999px; background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.18); color: #fff; text-decoration: none; font: 700 14px Poppins, sans-serif; letter-spacing: .03em; transition: background .2s, border-color .2s, color .2s; }
+.prod-bar a img { width: 26px; height: 26px; border-radius: 50%; background: #fff; object-fit: contain; padding: 2px; }
+.prod-bar a:hover, .prod-bar a:focus-visible { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+@media (max-width: 560px) { .prod-bar-in { gap: 6px; } .prod-bar a { padding: 4px 9px 4px 4px; font-size: 12px; gap: 5px; } .prod-bar a img { width: 22px; height: 22px; } }
