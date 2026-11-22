@@ -20,11 +20,13 @@
 
 <main class="wrap doc">
   <h1>Privacy policy</h1>
-  <p class="muted">Effective 17 November 2026 · applies to NEXTACH BOOK, FEE and DORMA (Windows) and NEXTACH PUNCH (Android)</p>
+  <p class="muted">Effective 22 November 2026 · applies to NEXTACH BOOK, FEE and DORMA (Windows) and NEXTACH PUNCH (Android)</p>
 
   <h2>In short</h2>
   <ul>
-    <li>Everything you enter stays on your own phone or computer. NEXTACH does not run servers that receive it.</li>
+    <li>Everything you enter stays on your own phone or computer. NEXTACH does not run servers that receive it - except
+      punches from employees' phones at other work sites, which pass through NEXTACH for a short time if the Admin switches
+      on location punching (section 7A).</li>
     <li>Once a week the software sends NEXTACH a short licence check-in (licence, device code, company name and contact) to protect against copied or cracked copies and to help with your trial - never your business data (section 7).</li>
     <li>Google Drive backup is optional. The app can reach only the backup files it creates in your own Drive.</li>
     <li>WhatsApp messages are optional. If the Admin links a WhatsApp number, the app sends only the messages described below.</li>
@@ -58,6 +60,11 @@
     <li><b>Fingerprint / biometrics</b>: to unlock the app login using Android's own fingerprint prompt. The app never
       receives or stores fingerprints.</li>
     <li><b>Internet</b>: for the daily licence check-in (section 7), for Google Drive backup and, if the Admin links WhatsApp, for sending WhatsApp messages.</li>
+    <li><b>Location</b>: in PUNCH only when the Admin taps "Use this phone's location" to save a work location. In PUNCH
+      Wave (the employee's app) only while it is open and the employee is set to punch by location, to check that the
+      phone is at one of the employee's work locations (section 7A). Location is never tracked in the background.</li>
+    <li><b>Nearby devices (Bluetooth)</b>: PUNCH Wave punches near the PUNCH phone over Bluetooth; it is not used to find
+      the location.</li>
   </ul>
 
   <h2>4. Google Drive backup (optional)</h2>
@@ -118,6 +125,21 @@
   <p><b>Downloads from this website</b>: when you click a download button, the file comes directly from GitHub. NEXTACH
     counts the click with the file name, the page, the country and the type of device (Windows, Android ...). Your IP
     address is not stored. GitHub also counts downloads of its files under its own privacy policy.</p>
+
+  <h2>7A. Location punching through PUNCH Wave (optional)</h2>
+  <p>A business with several work sites can switch on "Punch from work locations over the Internet" on its PUNCH phone.
+    An employee set to punch by location then marks IN / OUT in PUNCH Wave at one of the work locations the Admin saved.
+    The punch travels from the employee's phone to the business's PUNCH phone through a NEXTACH mailbox
+    (checkin.nextach.in). Each punch contains only: the employee code, the phone's model and app code, a random punch number,
+    the GPS latitude, longitude and accuracy at the moment of the punch, whether a fake-location app was detected, and the
+    time. The answer (IN / OUT, time, on time / late) goes back the same way. The mailbox also holds, for each linked
+    employee, the punch setting and the work locations (names, latitude, longitude, distance allowed) so PUNCH Wave can show
+    them.</p>
+  <p>Punches and answers are signed with a key that only the employee's phone and the PUNCH phone know, so NEXTACH cannot
+    make or change them. A punch is deleted from the mailbox as soon as the PUNCH phone has collected it, and at the latest
+    after 3 days; answers are deleted after 3 days; the settings of an employee are deleted when the phone is unlinked, and
+    everything is deleted when the PUNCH phone has not connected for a year. NEXTACH does not look at, share or use this data for anything else.
+    Location is read only at the moment the employee uses PUNCH Wave - never in the background.</p>
 
   <h2>8. Keeping and deleting data</h2>
   <p>Data stays on the device until the Admin deletes it. In Company Profile the Admin can choose to keep only the
