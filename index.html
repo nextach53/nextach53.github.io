@@ -48,7 +48,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=06616127">
+<link rel="stylesheet" href="style.css?v=cee4ce61">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa-ico" viewBox="0 0 32 32"><path fill="#fff" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.4 10.4 0 0 1-1.8-5.7C5 9.9 9.9 5.2 16 5.2s11 4.7 11 10.6-4.9 10.6-11 10.6zm6-7.9c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.7-1.6-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6.3-.5c.1-.2 0-.4 0-.6l-1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.1-.3-.2-.7-.4z"/></symbol></svg>
@@ -125,7 +125,7 @@
   </div>
 </section>
 
-<!-- ============ PRODUCTS (15-11-2026: one section per product - text, video, screen tour) ============ -->
+<!-- ============ PRODUCTS (15-11-2026: one section per product - text, showcase, screen tour (22-11-2026: videos removed)) ============ -->
 <main id="products">
   <div class="wrap head reveal prod-head">
     <span class="eyebrow">Our products</span>
@@ -157,11 +157,11 @@
         </ul>
         <p class="price" data-nx-price="NX-BOOK" data-unit="per computer"><span class="now">Free</span><s>₹19,999</s><span class="once">free software · NEXTACH ACCESS ₹1,999/year · per computer</span></p>
         <p class="meta">Version 1.0.5 · <span class="upd" title="Date and time this file was last updated (India time)">Updated 22-11-2026, 7:22 PM</span> · 47.7 MB · Windows 10 / 11</p>
-        <div class="actions"><a class="btn btn-main dl" data-file="NEXTACH_BOOK_Setup_V1.0.5.exe" href="#">⬇ Download setup</a><a class="btn btn-wa act" title="WhatsApp for more information and activation"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><use href="#wa-ico"></use></svg>WhatsApp us</a><button type="button" class="btn btn-line vid" title="2-minute intro video in Hindi" data-video="video_book.mp4" data-poster="video_book.jpg" data-title="NEXTACH BOOK">▶ Watch video</button></div>
+        <div class="actions"><a class="btn btn-main dl" data-file="NEXTACH_BOOK_Setup_V1.0.5.exe" href="#">⬇ Download setup</a><a class="btn btn-wa act" title="WhatsApp for more information and activation"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><use href="#wa-ico"></use></svg>WhatsApp us</a><a class="btn btn-line" href="#book-tour" title="See every screen of NEXTACH BOOK">◎ See the screens</a></div>
       </div>
-      <div class="p-art"><button type="button" class="browser vid poster" data-video="video_book.mp4" data-poster="video_book.jpg" data-title="NEXTACH BOOK" aria-label="Play the NEXTACH BOOK video"><img src="video_book.jpg" alt="NEXTACH BOOK intro video" loading="lazy"><span class="play">▶</span></button><p class="p-cap">2-minute intro video in Hindi</p></div>
+      <div class="p-art"><a class="showcase sc-browser" href="#book-tour" aria-label="See the NEXTACH BOOK screens"><span class="sc-glow" aria-hidden="true"></span><div class="browser sc-back"><i></i><i></i><i></i><img src="tour_book_sale_entry.jpg" alt="" loading="lazy"></div><div class="browser sc-front"><i></i><i></i><i></i><img src="tour_book_dashboard.jpg" alt="NEXTACH BOOK screen with demonstration data" loading="lazy"></div><span class="sc-chip c1"><b>🧾</b>GST / VAT bills in seconds</span><span class="sc-chip c2"><b>🌍</b>5 countries, 1 software</span><span class="sc-chip c3"><b>📲</b>Bills on WhatsApp</span></a><p class="p-cap">Real screens with demonstration data · <a href="#book-tour">take the tour ↓</a></p></div>
       </div>
-      <div class="p-tour">
+      <div class="p-tour" id="book-tour">
         <h4 class="tour-head"><span class="tour-k">Screens 1</span> India · <span class="accent">GST</span> - head office, screen by screen</h4>
         <div class="tour-in">
           <div class="tour-tabs" role="tablist" aria-label="NEXTACH BOOK India GST screens">
@@ -236,13 +236,13 @@
           <li>Staff can also punch from their own phone near the office (free PUNCH Wave app)</li>
         </ul>
         <p class="price" data-nx-price="NX-PUNCH" data-unit="per phone"><span class="now">Free</span><s>₹14,999</s><span class="once">free software · NEXTACH ACCESS ₹1,999/year · per phone</span></p>
-        <p class="meta">Version 1.0.5 · <span class="upd" title="Date and time this file was last updated (India time)">Updated 22-11-2026, 7:35 PM</span> · 88.2 MB · Android 9 or newer</p>
-        <div class="actions"><a class="btn btn-main dl" data-file="NEXTACH_PUNCH_V1.0.5.apk" href="#">⬇ Download APK</a><a class="btn btn-wa act" title="WhatsApp for more information and activation"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><use href="#wa-ico"></use></svg>WhatsApp us</a><button type="button" class="btn btn-line vid" title="2-minute intro video in Hindi" data-video="video_punch.mp4" data-poster="video_punch.jpg" data-title="NEXTACH PUNCH">▶ Watch video</button></div>
-        <p class="wave-dl" id="wave" data-product="NEXTACH PUNCH WAVE"><b>PUNCH Wave</b> - free app for your employees' own Android phones: tap PUNCH and unlock with their fingerprint when near the PUNCH phone (Bluetooth). The Admin links each phone with a QR, up to the employees in your licence. <span data-meta="PUNCH_WAVE">Version 1.0.5 · <span class="upd" title="Date and time this file was last updated (India time)">Updated 22-11-2026, 7:31 PM</span> · 5.2 MB</span> · <a class="dl" data-file="NEXTACH_PUNCH_WAVE_V1.0.5.apk" href="#">⬇ Download PUNCH Wave</a></p>
+        <p class="meta">Version 1.0.5 · <span class="upd" title="Date and time this file was last updated (India time)">Updated 22-11-2026, 8:08 PM</span> · 88.2 MB · Android 9 or newer</p>
+        <div class="actions"><a class="btn btn-main dl" data-file="NEXTACH_PUNCH_V1.0.5.apk" href="#">⬇ Download APK</a><a class="btn btn-wa act" title="WhatsApp for more information and activation"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><use href="#wa-ico"></use></svg>WhatsApp us</a><a class="btn btn-line" href="#punch-tour" title="See every screen of NEXTACH PUNCH">◎ See the screens</a></div>
+        <p class="wave-dl" id="wave" data-product="NEXTACH PUNCH WAVE"><b>PUNCH Wave</b> - free app for your employees' own Android phones: tap PUNCH and unlock with their fingerprint when near the PUNCH phone (Bluetooth). The Admin links each phone with a QR, up to the employees in your licence. <span data-meta="PUNCH_WAVE">Version 1.0.5 · <span class="upd" title="Date and time this file was last updated (India time)">Updated 22-11-2026, 8:13 PM</span> · 5.2 MB</span> · <a class="dl" data-file="NEXTACH_PUNCH_WAVE_V1.0.5.apk" href="#">⬇ Download PUNCH Wave</a></p>
       </div>
-      <div class="p-art"><button type="button" class="browser vid poster" data-video="video_punch.mp4" data-poster="video_punch.jpg" data-title="NEXTACH PUNCH" aria-label="Play the NEXTACH PUNCH video"><img src="video_punch.jpg" alt="NEXTACH PUNCH intro video" loading="lazy"><span class="play">▶</span></button><p class="p-cap">2-minute intro video in Hindi</p></div>
+      <div class="p-art"><a class="showcase sc-phone" href="#punch-tour" aria-label="See the NEXTACH PUNCH screens"><span class="sc-glow" aria-hidden="true"></span><div class="phone sc-back"><div class="screen"><img src="tour_punch_attendance.jpg" alt="" loading="lazy"></div></div><div class="phone sc-front"><div class="screen"><img src="tour_punch_home.jpg" alt="NEXTACH PUNCH screen with demonstration data" loading="lazy"></div></div><span class="sc-chip c1"><b>🙂</b>Face scan with blink check</span><span class="sc-chip c2"><b>⏱️</b>Late &amp; OT worked out</span><span class="sc-chip c3"><b>📊</b>Muster in one tap</span></a><p class="p-cap">Real screens with demonstration data · <a href="#punch-tour">take the tour ↓</a></p></div>
       </div>
-      <div class="p-tour p-tour-phone">
+      <div class="p-tour p-tour-phone" id="punch-tour">
         <h4 class="tour-head">NEXTACH PUNCH <span class="accent">screen by screen</span></h4>
         <div class="tour-in">
           <div class="tour-tabs" role="tablist" aria-label="NEXTACH PUNCH screens">
@@ -278,11 +278,11 @@
         </ul>
         <p class="price" data-nx-price="NX-FEE" data-unit="per computer"><span class="now">Free</span><s>₹14,999</s><span class="once">free software · NEXTACH ACCESS ₹1,999/year · per computer</span></p>
         <p class="meta">Version 1.0.5 · <span class="upd" title="Date and time this file was last updated (India time)">Updated 22-11-2026, 7:11 PM</span> · 44.2 MB · Windows 10 / 11</p>
-        <div class="actions"><a class="btn btn-main dl" data-file="NEXTACH_FEE_Setup_V1.0.5.exe" href="#">⬇ Download setup</a><a class="btn btn-wa act" title="WhatsApp for more information and activation"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><use href="#wa-ico"></use></svg>WhatsApp us</a><button type="button" class="btn btn-line vid" title="2-minute intro video in Hindi" data-video="video_fee.mp4" data-poster="video_fee.jpg" data-title="NEXTACH FEE">▶ Watch video</button></div>
+        <div class="actions"><a class="btn btn-main dl" data-file="NEXTACH_FEE_Setup_V1.0.5.exe" href="#">⬇ Download setup</a><a class="btn btn-wa act" title="WhatsApp for more information and activation"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><use href="#wa-ico"></use></svg>WhatsApp us</a><a class="btn btn-line" href="#fee-tour" title="See every screen of NEXTACH FEE">◎ See the screens</a></div>
       </div>
-      <div class="p-art"><button type="button" class="browser vid poster" data-video="video_fee.mp4" data-poster="video_fee.jpg" data-title="NEXTACH FEE" aria-label="Play the NEXTACH FEE video"><img src="video_fee.jpg" alt="NEXTACH FEE intro video" loading="lazy"><span class="play">▶</span></button><p class="p-cap">2-minute intro video in Hindi</p></div>
+      <div class="p-art"><a class="showcase sc-browser" href="#fee-tour" aria-label="See the NEXTACH FEE screens"><span class="sc-glow" aria-hidden="true"></span><div class="browser sc-back"><i></i><i></i><i></i><img src="tour_fee_receipts.jpg" alt="" loading="lazy"></div><div class="browser sc-front"><i></i><i></i><i></i><img src="tour_fee_dashboard.jpg" alt="NEXTACH FEE screen with demonstration data" loading="lazy"></div><span class="sc-chip c1"><b>🎓</b>Admissions with photo</span><span class="sc-chip c2"><b>💸</b>Dues &amp; instalments</span><span class="sc-chip c3"><b>📲</b>Receipts on WhatsApp</span></a><p class="p-cap">Real screens with demonstration data · <a href="#fee-tour">take the tour ↓</a></p></div>
       </div>
-      <div class="p-tour">
+      <div class="p-tour" id="fee-tour">
         <h4 class="tour-head">NEXTACH FEE <span class="accent">screen by screen</span></h4>
         <div class="tour-in">
           <div class="tour-tabs" role="tablist" aria-label="NEXTACH FEE screens">
@@ -318,11 +318,11 @@
         </ul>
         <p class="price" data-nx-price="NX-DORMA" data-unit="per computer"><span class="now">Free</span><s>₹14,999</s><span class="once">free software · NEXTACH ACCESS ₹1,999/year · per computer</span></p>
         <p class="meta">Version 1.0.5 · <span class="upd" title="Date and time this file was last updated (India time)">Updated 22-11-2026, 7:07 PM</span> · 43.6 MB · Windows 10 / 11</p>
-        <div class="actions"><a class="btn btn-main dl" data-file="NEXTACH_DORMA_Setup_V1.0.5.exe" href="#">⬇ Download setup</a><a class="btn btn-wa act" title="WhatsApp for more information and activation"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><use href="#wa-ico"></use></svg>WhatsApp us</a><button type="button" class="btn btn-line vid" title="2-minute intro video in Hindi" data-video="video_dorma.mp4" data-poster="video_dorma.jpg" data-title="NEXTACH DORMA">▶ Watch video</button></div>
+        <div class="actions"><a class="btn btn-main dl" data-file="NEXTACH_DORMA_Setup_V1.0.5.exe" href="#">⬇ Download setup</a><a class="btn btn-wa act" title="WhatsApp for more information and activation"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><use href="#wa-ico"></use></svg>WhatsApp us</a><a class="btn btn-line" href="#dorma-tour" title="See every screen of NEXTACH DORMA">◎ See the screens</a></div>
       </div>
-      <div class="p-art"><button type="button" class="browser vid poster" data-video="video_dorma.mp4" data-poster="video_dorma.jpg" data-title="NEXTACH DORMA" aria-label="Play the NEXTACH DORMA video"><img src="video_dorma.jpg" alt="NEXTACH DORMA intro video" loading="lazy"><span class="play">▶</span></button><p class="p-cap">2-minute intro video in Hindi</p></div>
+      <div class="p-art"><a class="showcase sc-browser" href="#dorma-tour" aria-label="See the NEXTACH DORMA screens"><span class="sc-glow" aria-hidden="true"></span><div class="browser sc-back"><i></i><i></i><i></i><img src="tour_dorma_occupancy.jpg" alt="" loading="lazy"></div><div class="browser sc-front"><i></i><i></i><i></i><img src="tour_dorma_dashboard.jpg" alt="NEXTACH DORMA screen with demonstration data" loading="lazy"></div><span class="sc-chip c1"><b>🛏️</b>Live bed chart</span><span class="sc-chip c2"><b>💰</b>Rent dues in 1 click</span><span class="sc-chip c3"><b>📄</b>KYC &amp; agreement PDF</span></a><p class="p-cap">Real screens with demonstration data · <a href="#dorma-tour">take the tour ↓</a></p></div>
       </div>
-      <div class="p-tour">
+      <div class="p-tour" id="dorma-tour">
         <h4 class="tour-head">NEXTACH DORMA <span class="accent">screen by screen</span></h4>
         <div class="tour-in">
           <div class="tour-tabs" role="tablist" aria-label="NEXTACH DORMA screens">
@@ -388,8 +388,8 @@
           done!</p></div>
     </div>
     <details class="sums reveal"><summary>File check (SHA-256)</summary><pre>5d2295f086f51aaa20107f5531beffc1ebd638e79aa30ecab371b9923b881886  NEXTACH_BOOK_Setup_V1.0.5.exe
-76fbcb134afd166caf3292570325235af04ef0fd9e83ca2f3aec0acce1aa4628  NEXTACH_PUNCH_V1.0.5.apk
-f61a517ddc2e7e8f523a20447b6916122bd0e9b9b09cc492c1419a973a14e0f7  NEXTACH_PUNCH_WAVE_V1.0.5.apk
+e780bc44a181291ebde4d0420d963d393a0204a1344c77b3c05a6b94af4746ea  NEXTACH_PUNCH_V1.0.5.apk
+d3d45d98cf1a1201cfd802810728cdb4c124db7b75f0a9992626c0c655da988a  NEXTACH_PUNCH_WAVE_V1.0.5.apk
 de39511ffb017ba4b71430244df4529545280618957d7514e54aab0a837810dc  NEXTACH_FEE_Setup_V1.0.5.exe
 fb64a05bc7c4642355c9fbad2d0fc592be20fe2d13e18ebcfde47f93ef48a6f0  NEXTACH_DORMA_Setup_V1.0.5.exe</pre></details>
   </div>
@@ -463,7 +463,6 @@ fb64a05bc7c4642355c9fbad2d0fc592be20fe2d13e18ebcfde47f93ef48a6f0  NEXTACH_DORMA_
 
 <!-- 14-11-2026: "Ask us" - opens a small panel, the question goes to the developer on WhatsApp -->
 <aside class="ask" id="ask" aria-label="Ask NEXTACH">
-  <p class="ask-nudge" id="ask-nudge" hidden>Questions about BOOK, FEE, DORMA or PUNCH? <b>Ask us.</b></p>
   <section class="ask-panel" id="ask-panel" role="dialog" aria-labelledby="ask-title" hidden>
     <header><img src="nextach_mark.png" alt=""><div><h4 id="ask-title">Ask the NEXTACH developer</h4><span>We reply on WhatsApp, usually the same day</span></div>
       <button type="button" class="ask-x" aria-label="Close">×</button></header>
@@ -479,6 +478,6 @@ fb64a05bc7c4642355c9fbad2d0fc592be20fe2d13e18ebcfde47f93ef48a6f0  NEXTACH_DORMA_
   <button type="button" class="ask-btn ask-open" aria-controls="ask-panel" aria-expanded="false"><svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><use href="#wa-ico"></use></svg>Ask us</button>
 </aside>
 
-<script src="site.js?v=f4b9d17a"></script>
+<script src="site.js?v=7ce15ae0"></script>
 </body>
 </html>
