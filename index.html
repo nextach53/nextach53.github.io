@@ -33,13 +33,13 @@
     },
     {"@type": "WebSite", "@id": "https://nextach.in/#site", "url": "https://nextach.in/", "name": "NEXTACH", "publisher": {"@id": "https://nextach.in/#org"}},
     {"@type": "SoftwareApplication", "name": "NEXTACH BOOK", "url": "https://nextach.in/#book", "applicationCategory": "BusinessApplication", "operatingSystem": "Windows",
-     "description": "Accounts & inventory management for supermarkets, wholesalers, distributors, dealers and manufacturers: GST billing, e-Invoice and e-Way Bill, VAT for UAE, Kenya, Tanzania and Kuwait, branches and multi-currency.", "publisher": {"@id": "https://nextach.in/#org"}, "offers": {"@type": "Offer", "price": "8000", "priceCurrency": "INR"}},
+     "description": "Accounts & inventory management for supermarkets, wholesalers, distributors, dealers and manufacturers: GST billing, e-Invoice and e-Way Bill, VAT for UAE, Kenya, Tanzania and Kuwait, branches and multi-currency.", "publisher": {"@id": "https://nextach.in/#org"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}},
     {"@type": "SoftwareApplication", "name": "NEXTACH FEE", "url": "https://nextach.in/#fee", "applicationCategory": "BusinessApplication", "operatingSystem": "Windows",
-     "description": "Tutorial and coaching institute management: students, batches, fees, receipts and reminders.", "publisher": {"@id": "https://nextach.in/#org"}, "offers": {"@type": "Offer", "price": "6000", "priceCurrency": "INR"}},
+     "description": "Tutorial and coaching institute management: students, batches, fees, receipts and reminders.", "publisher": {"@id": "https://nextach.in/#org"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}},
     {"@type": "SoftwareApplication", "name": "NEXTACH DORMA", "url": "https://nextach.in/#dorma", "applicationCategory": "BusinessApplication", "operatingSystem": "Windows",
-     "description": "Hostel and PG management: rooms, beds, occupancy, rent and receipts.", "publisher": {"@id": "https://nextach.in/#org"}, "offers": {"@type": "Offer", "price": "6000", "priceCurrency": "INR"}},
+     "description": "Hostel and PG management: rooms, beds, occupancy, rent and receipts.", "publisher": {"@id": "https://nextach.in/#org"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}},
     {"@type": "SoftwareApplication", "name": "NEXTACH PUNCH", "url": "https://nextach.in/#punch", "applicationCategory": "BusinessApplication", "operatingSystem": "Android",
-     "description": "Staff attendance and payroll app for factories, shops, offices, schools and hospitals.", "publisher": {"@id": "https://nextach.in/#org"}, "offers": {"@type": "Offer", "price": "6000", "priceCurrency": "INR"}}
+     "description": "Staff attendance and payroll app for factories, shops, offices, schools and hospitals.", "publisher": {"@id": "https://nextach.in/#org"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}
   ]
 }
 </script>
@@ -48,7 +48,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=3b9b20e7">
+<link rel="stylesheet" href="style.css?v=06616127">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa-ico" viewBox="0 0 32 32"><path fill="#fff" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.4 10.4 0 0 1-1.8-5.7C5 9.9 9.9 5.2 16 5.2s11 4.7 11 10.6-4.9 10.6-11 10.6zm6-7.9c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.7-1.6-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6.3-.5c.1-.2 0-.4 0-.6l-1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.1-.3-.2-.7-.4z"/></symbol></svg>
@@ -65,6 +65,15 @@
       <a class="btn btn-wa btn-sm wa-help" href="#">WhatsApp</a>
     </nav>
   </div>
+  <!-- 22-11-2026: one button per product, always on top -->
+  <nav class="prod-bar" aria-label="Go to product">
+    <div class="wrap prod-bar-in">
+      <a href="#book"><img src="product_book.png" alt="">BOOK</a>
+      <a href="#punch"><img src="product_punch.png" alt="">PUNCH</a>
+      <a href="#fee"><img src="product_fee.png" alt="">FEE</a>
+      <a href="#dorma"><img src="product_dorma.png" alt="">DORMA</a>
+    </div>
+  </nav>
 </header>
 
 <!-- ============ HERO ============ -->
@@ -74,7 +83,7 @@
     <div class="hero-text reveal">
       <span class="pill">✦ Effortless Management</span>
       <h1>Smart Software, <span class="hl">Zero Headaches</span></h1>
-      <p>Accounts, coaching institutes, hostels and staff attendance - simple, reliable software developed in India. Free trial, WhatsApp support, and your data stays on your own computer or phone.</p>
+      <p>Accounts, staff attendance, coaching institutes and hostels - simple, reliable software developed in India. Free trial, WhatsApp support, and your data stays on your own computer or phone.</p>
       <div class="hero-cta">
         <a class="btn btn-gold btn-lg" href="#businesses">See software for your business</a>
         <a class="btn btn-ghost btn-lg wa-help" href="#"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><use href="#wa-ico"></use></svg>WhatsApp us</a>
@@ -83,7 +92,7 @@
         <li><b>4</b> products</li>
         <li><b>5</b> countries</li>
         <li><b>100%</b> offline data</li>
-        <li><b>Lifetime</b> licence</li>
+        <li><b>Free</b> software</li>
         <li><b>Free</b> trial</li>
         <li><b>WhatsApp</b> support</li>
       </ul>
@@ -109,9 +118,9 @@
       <a class="biz-card reveal" href="#book"><span class="ic">🔧</span><h4>Dealers</h4><p>Hardware, paint, electrical, sanitary, auto parts, building material - thousands of items in box, piece and carton units.</p><span class="tag">NEXTACH BOOK</span></a>
       <a class="biz-card reveal" href="#book"><span class="ic">🏭</span><h4>Medium-size manufacturers</h4><p>Raw material to finished goods with a Production entry, stock at factory and depots, e-Invoice &amp; e-Way Bill.</p><span class="tag">NEXTACH BOOK</span></a>
       <a class="biz-card reveal" href="#book"><span class="ic">🌍</span><h4>Traders, importers &amp; exporters</h4><p>Branches in several countries, each with its own tax and currency, with daily exchange rates for head office.</p><span class="tag">NEXTACH BOOK</span></a>
+      <a class="biz-card reveal" href="#punch"><span class="ic">⏱️</span><h4>Factories, shops &amp; offices</h4><p>Staff attendance by face scan or ID-card QR on one Android phone - late, OT and monthly muster worked out.</p><span class="tag">NEXTACH PUNCH</span></a>
       <a class="biz-card reveal" href="#fee"><span class="ic">🎓</span><h4>Coaching institutes &amp; academies</h4><p>Admissions, fee dues and instalments, receipts on WhatsApp, QR attendance and ID cards.</p><span class="tag">NEXTACH FEE</span></a>
       <a class="biz-card reveal" href="#dorma"><span class="ic">🏠</span><h4>Hostels, PGs &amp; co-living</h4><p>Live bed chart, monthly rent dues in one click, deposits, check-out and full accounts.</p><span class="tag">NEXTACH DORMA</span></a>
-      <a class="biz-card reveal" href="#punch"><span class="ic">⏱️</span><h4>Factories, shops &amp; offices</h4><p>Staff attendance by face scan or ID-card QR on one Android phone - late, OT and monthly muster worked out.</p><span class="tag">NEXTACH PUNCH</span></a>
     </div>
   </div>
 </section>
@@ -124,12 +133,12 @@
     <p>Each product works on its own: download the free trial, try it with your own data, and activate on WhatsApp when you are happy.</p>
   </div>
   <nav class="wrap prod-jump reveal" aria-label="Products">
-    <a href="#book"><img src="product_book.png" alt=""><b>BOOK</b><small>Accounts &amp; inventory<span class="pf" data-nx-price="NX-BOOK">from ₹8,000</span></small></a>
-    <a href="#fee"><img src="product_fee.png" alt=""><b>FEE</b><small>Coaching institutes<span class="pf" data-nx-price="NX-FEE">from ₹6,000</span></small></a>
-    <a href="#dorma"><img src="product_dorma.png" alt=""><b>DORMA</b><small>Hostels &amp; PGs<span class="pf" data-nx-price="NX-DORMA">from ₹6,000</span></small></a>
-    <a href="#punch"><img src="product_punch.png" alt=""><b>PUNCH</b><small>Staff attendance<span class="pf" data-nx-price="NX-PUNCH">from ₹6,000</span></small></a>
+    <a href="#book"><img src="product_book.png" alt=""><b>BOOK</b><small>Accounts &amp; inventory<span class="pf" data-nx-price="NX-BOOK">from ₹0</span></small></a>
+    <a href="#punch"><img src="product_punch.png" alt=""><b>PUNCH</b><small>Staff attendance<span class="pf" data-nx-price="NX-PUNCH">from ₹0</span></small></a>
+    <a href="#fee"><img src="product_fee.png" alt=""><b>FEE</b><small>Coaching institutes<span class="pf" data-nx-price="NX-FEE">from ₹0</span></small></a>
+    <a href="#dorma"><img src="product_dorma.png" alt=""><b>DORMA</b><small>Hostels &amp; PGs<span class="pf" data-nx-price="NX-DORMA">from ₹0</span></small></a>
   </nav>
-  <p class="wrap price-note reveal" data-nx-price="note">Software: one-time price, no monthly fee. Yearly setup: company + 1 Admin + 2 users ₹1,499 (PUNCH: with 5 employees) · extra user ₹249 · branch ₹999 · PUNCH 5 more employees ₹499. Taxes extra · <a class="wa-help" href="#">WhatsApp us for today's offer</a></p>
+  <p class="wrap price-note reveal" data-nx-price="note">Software: one-time price, no monthly fee. Yearly setup: company + 1 Admin + 2 users ₹1,999 (PUNCH: with 5 employees) · extra user ₹249 · branch ₹999 · PUNCH 5 more employees ₹499. Taxes extra · <a class="wa-help" href="#">WhatsApp us for today's offer</a></p>
 
   <section class="product reveal" id="book" data-product="NEXTACH BOOK">
     <div class="wrap">
@@ -146,7 +155,7 @@
           <li>Multi-currency with daily exchange rates · backup on your PC and Google Drive</li>
           <li>Dual Book: A and C books in one software, both open only with your Full Login Code</li>
         </ul>
-        <p class="price" data-nx-price="NX-BOOK" data-unit="per computer"><span class="now">₹8,000</span><s>₹19,999</s><span class="once">one-time · lifetime licence · per computer</span></p>
+        <p class="price" data-nx-price="NX-BOOK" data-unit="per computer"><span class="now">₹0</span><s>₹19,999</s><span class="once">one-time · lifetime licence · per computer</span></p>
         <p class="meta">Version 1.0.5 · <span class="upd" title="Date and time this file was last updated (India time)">Updated 21-11-2026, 2:30 AM</span> · 47.5 MB · Windows 10 / 11</p>
         <div class="actions"><a class="btn btn-main dl" data-file="NEXTACH_BOOK_Setup_V1.0.5.exe" href="#">⬇ Download setup</a><a class="btn btn-wa act" title="WhatsApp for more information and activation"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><use href="#wa-ico"></use></svg>WhatsApp us</a><button type="button" class="btn btn-line vid" title="2-minute intro video in Hindi" data-video="video_book.mp4" data-poster="video_book.jpg" data-title="NEXTACH BOOK">▶ Watch video</button></div>
       </div>
@@ -212,7 +221,49 @@
     </div>
   </section>
 
-  <section class="product alt reveal" id="fee" data-product="NEXTACH FEE">
+  <section class="product alt reveal" id="punch" data-product="NEXTACH PUNCH">
+    <div class="wrap">
+      <div class="p-in">
+      <div class="p-text">
+        <div class="p-title"><img src="product_punch.png" alt=""><div><h3>NEXTACH PUNCH <em class="new">New</em></h3><span class="plat">Android phone or tablet</span></div></div>
+        <p class="tagline">Attendance &amp; payroll in your pocket.</p>
+        <p>Staff mark attendance with a face scan or ID-card QR on one Android phone - no typing, no punching machine.</p>
+        <ul class="ticks">
+          <li>Face scan with blink check, or ID-card QR</li>
+          <li>Shifts, holidays, late / early / half-day / OT</li>
+          <li>Leave types, balances &amp; ID cards</li>
+          <li>Reports as PDF, Excel or WhatsApp · Google Drive backup</li>
+          <li>Staff can also punch from their own phone near the office (free PUNCH Wave app)</li>
+        </ul>
+        <p class="price" data-nx-price="NX-PUNCH" data-unit="per phone"><span class="now">₹0</span><s>₹14,999</s><span class="once">one-time · lifetime licence · per phone</span></p>
+        <p class="meta">Version 1.0.5 · <span class="upd" title="Date and time this file was last updated (India time)">Updated 21-11-2026, 2:36 AM</span> · 88.1 MB · Android 9 or newer</p>
+        <div class="actions"><a class="btn btn-main dl" data-file="NEXTACH_PUNCH_V1.0.5.apk" href="#">⬇ Download APK</a><a class="btn btn-wa act" title="WhatsApp for more information and activation"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><use href="#wa-ico"></use></svg>WhatsApp us</a><button type="button" class="btn btn-line vid" title="2-minute intro video in Hindi" data-video="video_punch.mp4" data-poster="video_punch.jpg" data-title="NEXTACH PUNCH">▶ Watch video</button></div>
+        <p class="wave-dl" id="wave" data-product="NEXTACH PUNCH WAVE"><b>PUNCH Wave</b> - free app for your employees' own Android phones: tap PUNCH and unlock with their fingerprint when near the PUNCH phone (Bluetooth). The Admin links each phone with a QR, up to the employees in your licence. <span data-meta="PUNCH_WAVE">Version 1.0.5 · <span class="upd" title="Date and time this file was last updated (India time)">Updated 21-11-2026, 2:37 AM</span> · 4.8 MB</span> · <a class="dl" data-file="NEXTACH_PUNCH_WAVE_V1.0.5.apk" href="#">⬇ Download PUNCH Wave</a></p>
+      </div>
+      <div class="p-art"><button type="button" class="browser vid poster" data-video="video_punch.mp4" data-poster="video_punch.jpg" data-title="NEXTACH PUNCH" aria-label="Play the NEXTACH PUNCH video"><img src="video_punch.jpg" alt="NEXTACH PUNCH intro video" loading="lazy"><span class="play">▶</span></button><p class="p-cap">2-minute intro video in Hindi</p></div>
+      </div>
+      <div class="p-tour p-tour-phone">
+        <h4 class="tour-head">NEXTACH PUNCH <span class="accent">screen by screen</span></h4>
+        <div class="tour-in">
+          <div class="tour-tabs" role="tablist" aria-label="NEXTACH PUNCH screens">
+          <button type="button" role="tab" class="on" data-img="tour_punch_home.jpg" data-t="Today at a glance" data-d="Present, absent, late and on leave - live, with the latest punches."><b>01</b>Home</button>
+          <button type="button" role="tab" data-img="tour_punch_attendance.jpg" data-t="In, out, hours and overtime" data-d="Every employee&#x27;s in and out time, hours worked, late, early and overtime - worked out from the shift."><b>02</b>Attendance</button>
+          <button type="button" role="tab" data-img="tour_punch_staff.jpg" data-t="Staff master" data-d="Department, shift and overtime rule for every employee - with photo and face for the kiosk."><b>03</b>Staff</button>
+          <button type="button" role="tab" data-img="tour_punch_idcard.jpg" data-t="ID cards with QR" data-d="Company logo, photo and QR - make a PDF of all cards and print."><b>04</b>ID Cards</button>
+          <button type="button" role="tab" data-img="tour_punch_reports.jpg" data-t="Every report ready" data-d="Daily attendance, monthly muster, paid days, late coming, early going, half day and overtime."><b>05</b>Reports</button>
+          <button type="button" role="tab" data-img="tour_punch_muster.jpg" data-t="Monthly muster" data-d="Present, leave and week-off for the whole month - PDF, Excel or WhatsApp."><b>06</b>Monthly Muster</button>
+          </div>
+          <figure class="tour-view">
+            <div class="phone"><div class="screen"><img class="tour-img" src="tour_punch_home.jpg" alt="NEXTACH PUNCH Home screen with demonstration data" loading="lazy"></div></div>
+            <figcaption><span class="eyebrow tour-n">Screen 01</span><h3 class="tour-t">Today at a glance</h3><p class="tour-d">Present, absent, late and on leave - live, with the latest punches.</p>
+              <button type="button" class="btn btn-line btn-sm tour-big">View larger ↗</button></figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="product reveal" id="fee" data-product="NEXTACH FEE">
     <div class="wrap">
       <div class="p-in">
       <div class="p-text">
@@ -225,7 +276,7 @@
           <li>QR attendance &amp; branded ID cards</li>
           <li>Built-in accounts, branches, users &amp; rights</li>
         </ul>
-        <p class="price" data-nx-price="NX-FEE" data-unit="per computer"><span class="now">₹6,000</span><s>₹14,999</s><span class="once">one-time · lifetime licence · per computer</span></p>
+        <p class="price" data-nx-price="NX-FEE" data-unit="per computer"><span class="now">₹0</span><s>₹14,999</s><span class="once">one-time · lifetime licence · per computer</span></p>
         <p class="meta">Version 1.0.5 · <span class="upd" title="Date and time this file was last updated (India time)">Updated 21-11-2026, 2:28 AM</span> · 44.2 MB · Windows 10 / 11</p>
         <div class="actions"><a class="btn btn-main dl" data-file="NEXTACH_FEE_Setup_V1.0.5.exe" href="#">⬇ Download setup</a><a class="btn btn-wa act" title="WhatsApp for more information and activation"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><use href="#wa-ico"></use></svg>WhatsApp us</a><button type="button" class="btn btn-line vid" title="2-minute intro video in Hindi" data-video="video_fee.mp4" data-poster="video_fee.jpg" data-title="NEXTACH FEE">▶ Watch video</button></div>
       </div>
@@ -252,7 +303,7 @@
     </div>
   </section>
 
-  <section class="product reveal" id="dorma" data-product="NEXTACH DORMA">
+  <section class="product alt reveal" id="dorma" data-product="NEXTACH DORMA">
     <div class="wrap">
       <div class="p-in">
       <div class="p-text">
@@ -265,7 +316,7 @@
           <li>Monthly dues in one click &amp; reminders</li>
           <li>Check-out, deposit refund &amp; full accounts</li>
         </ul>
-        <p class="price" data-nx-price="NX-DORMA" data-unit="per computer"><span class="now">₹6,000</span><s>₹14,999</s><span class="once">one-time · lifetime licence · per computer</span></p>
+        <p class="price" data-nx-price="NX-DORMA" data-unit="per computer"><span class="now">₹0</span><s>₹14,999</s><span class="once">one-time · lifetime licence · per computer</span></p>
         <p class="meta">Version 1.0.5 · <span class="upd" title="Date and time this file was last updated (India time)">Updated 21-11-2026, 2:22 AM</span> · 43.5 MB · Windows 10 / 11</p>
         <div class="actions"><a class="btn btn-main dl" data-file="NEXTACH_DORMA_Setup_V1.0.5.exe" href="#">⬇ Download setup</a><a class="btn btn-wa act" title="WhatsApp for more information and activation"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><use href="#wa-ico"></use></svg>WhatsApp us</a><button type="button" class="btn btn-line vid" title="2-minute intro video in Hindi" data-video="video_dorma.mp4" data-poster="video_dorma.jpg" data-title="NEXTACH DORMA">▶ Watch video</button></div>
       </div>
@@ -287,48 +338,6 @@
           <figure class="tour-view">
             <div class="browser"><img class="tour-img" src="tour_dorma_dashboard.jpg" alt="NEXTACH DORMA Dashboard screen with demonstration data" loading="lazy"></div>
             <figcaption><span class="eyebrow tour-n">Screen 01</span><h3 class="tour-t">Every property, every bed</h3><p class="tour-d">Total, occupied, vacant and on-notice beds for each property, rent due and received, cash and bank.</p>
-              <button type="button" class="btn btn-line btn-sm tour-big">View larger ↗</button></figcaption>
-          </figure>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="product alt reveal" id="punch" data-product="NEXTACH PUNCH">
-    <div class="wrap">
-      <div class="p-in">
-      <div class="p-text">
-        <div class="p-title"><img src="product_punch.png" alt=""><div><h3>NEXTACH PUNCH <em class="new">New</em></h3><span class="plat">Android phone or tablet</span></div></div>
-        <p class="tagline">Attendance &amp; payroll in your pocket.</p>
-        <p>Staff mark attendance with a face scan or ID-card QR on one Android phone - no typing, no punching machine.</p>
-        <ul class="ticks">
-          <li>Face scan with blink check, or ID-card QR</li>
-          <li>Shifts, holidays, late / early / half-day / OT</li>
-          <li>Leave types, balances &amp; ID cards</li>
-          <li>Reports as PDF, Excel or WhatsApp · Google Drive backup</li>
-          <li>Staff can also punch from their own phone near the office (free PUNCH Wave app)</li>
-        </ul>
-        <p class="price" data-nx-price="NX-PUNCH" data-unit="per phone"><span class="now">₹6,000</span><s>₹14,999</s><span class="once">one-time · lifetime licence · per phone</span></p>
-        <p class="meta">Version 1.0.5 · <span class="upd" title="Date and time this file was last updated (India time)">Updated 21-11-2026, 2:36 AM</span> · 88.1 MB · Android 9 or newer</p>
-        <div class="actions"><a class="btn btn-main dl" data-file="NEXTACH_PUNCH_V1.0.5.apk" href="#">⬇ Download APK</a><a class="btn btn-wa act" title="WhatsApp for more information and activation"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><use href="#wa-ico"></use></svg>WhatsApp us</a><button type="button" class="btn btn-line vid" title="2-minute intro video in Hindi" data-video="video_punch.mp4" data-poster="video_punch.jpg" data-title="NEXTACH PUNCH">▶ Watch video</button></div>
-        <p class="wave-dl" id="wave" data-product="NEXTACH PUNCH WAVE"><b>PUNCH Wave</b> - free app for your employees' own Android phones: tap PUNCH and unlock with their fingerprint when near the PUNCH phone (Bluetooth). The Admin links each phone with a QR, up to the employees in your licence. <span data-meta="PUNCH_WAVE">Version 1.0.5 · <span class="upd" title="Date and time this file was last updated (India time)">Updated 21-11-2026, 2:37 AM</span> · 4.8 MB</span> · <a class="dl" data-file="NEXTACH_PUNCH_WAVE_V1.0.5.apk" href="#">⬇ Download PUNCH Wave</a></p>
-      </div>
-      <div class="p-art"><button type="button" class="browser vid poster" data-video="video_punch.mp4" data-poster="video_punch.jpg" data-title="NEXTACH PUNCH" aria-label="Play the NEXTACH PUNCH video"><img src="video_punch.jpg" alt="NEXTACH PUNCH intro video" loading="lazy"><span class="play">▶</span></button><p class="p-cap">2-minute intro video in Hindi</p></div>
-      </div>
-      <div class="p-tour p-tour-phone">
-        <h4 class="tour-head">NEXTACH PUNCH <span class="accent">screen by screen</span></h4>
-        <div class="tour-in">
-          <div class="tour-tabs" role="tablist" aria-label="NEXTACH PUNCH screens">
-          <button type="button" role="tab" class="on" data-img="tour_punch_home.jpg" data-t="Today at a glance" data-d="Present, absent, late and on leave - live, with the latest punches."><b>01</b>Home</button>
-          <button type="button" role="tab" data-img="tour_punch_attendance.jpg" data-t="In, out, hours and overtime" data-d="Every employee&#x27;s in and out time, hours worked, late, early and overtime - worked out from the shift."><b>02</b>Attendance</button>
-          <button type="button" role="tab" data-img="tour_punch_staff.jpg" data-t="Staff master" data-d="Department, shift and overtime rule for every employee - with photo and face for the kiosk."><b>03</b>Staff</button>
-          <button type="button" role="tab" data-img="tour_punch_idcard.jpg" data-t="ID cards with QR" data-d="Company logo, photo and QR - make a PDF of all cards and print."><b>04</b>ID Cards</button>
-          <button type="button" role="tab" data-img="tour_punch_reports.jpg" data-t="Every report ready" data-d="Daily attendance, monthly muster, paid days, late coming, early going, half day and overtime."><b>05</b>Reports</button>
-          <button type="button" role="tab" data-img="tour_punch_muster.jpg" data-t="Monthly muster" data-d="Present, leave and week-off for the whole month - PDF, Excel or WhatsApp."><b>06</b>Monthly Muster</button>
-          </div>
-          <figure class="tour-view">
-            <div class="phone"><div class="screen"><img class="tour-img" src="tour_punch_home.jpg" alt="NEXTACH PUNCH Home screen with demonstration data" loading="lazy"></div></div>
-            <figcaption><span class="eyebrow tour-n">Screen 01</span><h3 class="tour-t">Today at a glance</h3><p class="tour-d">Present, absent, late and on leave - live, with the latest punches.</p>
               <button type="button" class="btn btn-line btn-sm tour-big">View larger ↗</button></figcaption>
           </figure>
         </div>
@@ -412,7 +421,7 @@
     </div>
     <div class="faq-list reveal">
       <details open><summary>How does the free trial work?</summary><p>Download and install the setup, then apply on the first screen with your name and WhatsApp number. We send your 15-day free-trial activation file on WhatsApp, with the users and branches you asked for. Buy only when you are happy with it.</p></details>
-      <details><summary>Is there a monthly fee? What does it cost?</summary><p data-nx-price="faq">No monthly fee. The software is a one-time, lifetime purchase: BOOK ₹8,000, FEE ₹6,000, DORMA ₹6,000 per computer and PUNCH ₹6,000 per phone. The company and user setup is yearly - ₹1,499 for 1 company, 1 Admin and 2 users (PUNCH: and 5 employees) (extra user ₹249, branch ₹999). Taxes extra. WhatsApp us for today's offer.</p></details>
+      <details><summary>Is there a monthly fee? What does it cost?</summary><p data-nx-price="faq">No monthly fee. The software is a one-time, lifetime purchase: BOOK ₹0, FEE ₹0, DORMA ₹0 per computer and PUNCH ₹0 per phone. The company and user setup is yearly - ₹1,999 for 1 company, 1 Admin and 2 users (PUNCH: and 5 employees) (extra user ₹249, branch ₹999). Taxes extra. WhatsApp us for today's offer.</p></details>
       <details><summary>Can I use it without internet?</summary><p>Yes. Daily billing, stock and accounts work on your own computer without internet. Internet is only needed for WhatsApp sending, Google Drive backup, exchange rates and branches working over the Internet.</p></details>
       <details><summary>Where is my data kept? Is it safe?</summary><p>On your own computer or phone - not on our servers. Backups go to your PC and, if you like, your own Google Drive.</p></details>
       <details><summary>Will an update delete my data?</summary><p>Never. Updates keep all your data, and a backup is taken before every update.</p></details>
@@ -443,7 +452,7 @@
   <div class="wrap foot-grid">
     <div class="f-brand"><a class="logo" href="#top"><img src="nextach_mark.png" alt="">NEXTACH</a>
       <p>Effortless Management - simple, reliable business software from Indore, India.</p></div>
-    <div><h5>Products</h5><a href="#book">NEXTACH BOOK</a><a href="#fee">NEXTACH FEE</a><a href="#dorma">NEXTACH DORMA</a><a href="#punch">NEXTACH PUNCH</a></div>
+    <div><h5>Products</h5><a href="#book">NEXTACH BOOK</a><a href="#punch">NEXTACH PUNCH</a><a href="#fee">NEXTACH FEE</a><a href="#dorma">NEXTACH DORMA</a></div>
     <div><h5>Company</h5><a href="#why">Why NEXTACH</a><a href="#businesses">Who it is for</a><a href="#countries">Countries</a><a href="#referral">Refer &amp; Earn</a></div>
     <div><h5>Help</h5><a href="#activate">Get started</a><a href="#faq">FAQ</a><a href="#contact">Contact</a><a href="privacy.html">Privacy policy</a></div>
     <div><h5>Contact</h5><a href="tel:+919109955733">+91 91099 55733</a><a href="tel:+917000215253">+91 70002 15253</a><a href="mailto:nextach53@gmail.com">nextach53@gmail.com</a><span>Indore, MP, India</span></div>
