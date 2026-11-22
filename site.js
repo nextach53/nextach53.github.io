@@ -117,29 +117,14 @@ document.querySelectorAll(".p-tour").forEach(function (tour) {
   });
 });
 
-// 15-11-2026: "Watch the video" - the product's Hindi intro video plays in a full-screen box (loaded only when asked)
-document.querySelectorAll(".vid[data-video]").forEach(function (b) {
-  b.addEventListener("click", function () {
-    var box = document.createElement("div");
-    box.className = "zoom vbox";
-    box.innerHTML = '<video controls autoplay playsinline preload="auto"></video><span role="button" aria-label="Close">×</span>';
-    var v = box.firstChild;
-    v.src = b.getAttribute("data-video");
-    v.poster = b.getAttribute("data-poster");
-    v.setAttribute("aria-label", b.getAttribute("data-title") + " intro video");
-    box.addEventListener("click", function (e) { if (e.target !== v) { v.pause(); box.remove(); } });
-    document.body.appendChild(box);
-  });
-});
-
 // 14-11-2026: "Ask us" panel - the question goes to the developer's WhatsApp (DEV_WA), not Customer Care
 var DEV_WA = "917000215253";
 (function () {
-  var panel = document.getElementById("ask-panel"), nudge = document.getElementById("ask-nudge"), btn = document.querySelector(".ask-btn");
+  var panel = document.getElementById("ask-panel"), btn = document.querySelector(".ask-btn");
   if (!panel) return;
   var topics = panel.querySelectorAll(".ask-topics button"), q = document.getElementById("ask-q"), send = document.getElementById("ask-send");
   function open(on) {
-    panel.hidden = !on; nudge.hidden = true;
+    panel.hidden = !on;
     btn.setAttribute("aria-expanded", on);
     if (on) q.focus();
   }
@@ -156,8 +141,6 @@ var DEV_WA = "917000215253";
   document.querySelectorAll(".ask-open").forEach(function (b) { b.addEventListener("click", function () { open(panel.hidden); }); });
   panel.querySelector(".ask-x").addEventListener("click", function () { open(false); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") { open(false); var z = document.querySelector(".zoom"); if (z) z.remove(); } });
-  setTimeout(function () { if (panel.hidden) nudge.hidden = false; }, 8000);
-  nudge.addEventListener("click", function () { open(true); });
 })();
 
 // fade sections in as they scroll into view (without this script everything simply shows)
