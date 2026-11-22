@@ -270,8 +270,6 @@ code { background: var(--bg2); padding: 1px 6px; border-radius: 5px; font-size: 
 .zoom { position: fixed; inset: 0; z-index: 90; background: rgba(15, 24, 40, .88); display: grid; place-items: center; padding: 16px; cursor: zoom-out; }
 .zoom img { max-width: 100%; max-height: 100%; border-radius: 10px; box-shadow: 0 30px 80px rgba(0,0,0,.6); }
 .zoom span { position: absolute; top: 12px; right: 20px; color: #fff; font-size: 36px; }
-.vbox { cursor: default; } .vbox span { cursor: pointer; }
-.vbox video { width: min(1100px, 100%); max-height: 100%; border-radius: 12px; background: #000; box-shadow: 0 30px 80px rgba(0,0,0,.6); }
 /* 19-11-2026: install help after a Download click (Windows SmartScreen / Smart App Control, Android unknown apps / Play Protect) */
 .ibox { cursor: default; }
 .ibox span { position: static; color: inherit; font-size: inherit; }     /* not the close-× rule of .zoom span */
@@ -379,12 +377,6 @@ code { background: var(--bg2); padding: 1px 6px; border-radius: 5px; font-size: 
 .prod-jump img { grid-row: 1 / 3; width: 52px; height: 52px; object-fit: contain; background: #fff; border-radius: 12px; }
 .prod-jump b { font: 800 17px Poppins, sans-serif; letter-spacing: .5px; }
 .prod-jump small { color: var(--muted); font-size: 13.5px; }
-.browser.poster { display: block; width: 100%; cursor: pointer; font: inherit; text-align: left; }
-.browser.poster img { width: 100%; }
-.browser.poster .play { position: absolute; left: 50%; top: calc(50% + 11px); transform: translate(-50%, -50%); width: 78px; height: 78px; border-radius: 50%;
-  display: grid; place-items: center; font-size: 30px; color: var(--ink); padding-left: 6px;
-  background: linear-gradient(135deg, var(--gold2), var(--gold)); box-shadow: 0 12px 30px -8px rgba(0,0,0,.5); transition: transform .15s; }
-.browser.poster:hover .play { transform: translate(-50%, -50%) scale(1.08); }
 .p-cap { text-align: center; color: var(--muted); font-size: 14px; margin: 12px 0 0; }
 .foot { padding: 48px 0 24px; background: var(--navy); color: #C7D2E1; border-top: 0; }
 .foot a { color: #C7D2E1; text-decoration: none; }
@@ -417,8 +409,6 @@ code { background: var(--bg2); padding: 1px 6px; border-radius: 5px; font-size: 
 .p-tour-phone .screen { padding: 0; aspect-ratio: 720 / 1471; height: auto; background: #F7F4EC; }
 .p-tour-phone .screen img { width: 100%; height: 100%; object-fit: contain; object-position: top; }
 .p-tour-phone figcaption { margin-top: 0; }
-.browser.poster { padding: 8px; }
-.browser.poster i { display: none; }
 .cty-panel { margin-top: 44px; padding: 34px 30px; border-radius: 22px; color: #fff; text-align: center;
   background: radial-gradient(700px 300px at 10% 0%, #3A5A8C 0%, transparent 60%), linear-gradient(160deg, var(--navy) 0%, #162641 100%); }
 .cty-panel h4 { color: #fff; font-size: clamp(22px, 2.6vw, 30px); }
@@ -454,3 +444,65 @@ html { scroll-padding-top: 116px; }
 .prod-bar a img { width: 26px; height: 26px; border-radius: 50%; background: #fff; object-fit: contain; padding: 2px; }
 .prod-bar a:hover, .prod-bar a:focus-visible { background: var(--gold); border-color: var(--gold); color: var(--ink); }
 @media (max-width: 560px) { .prod-bar-in { gap: 6px; } .prod-bar a { padding: 4px 9px 4px 4px; font-size: 12px; gap: 5px; } .prod-bar a img { width: 22px; height: 22px; } }
+
+/* ---------- 22-11-2026: product showcase (in place of the intro videos) - two real screens stacked in 3D,
+   a soft moving colour glow behind them and floating feature chips. Click -> that product's screen tour. ---------- */
+.showcase { position: relative; display: block; padding: 34px 0 40px; text-decoration: none; color: var(--navy); perspective: 1400px; isolation: isolate; }
+.sc-glow { position: absolute; inset: 4% 2% 8%; z-index: -1; border-radius: 40px; filter: blur(46px); opacity: .55;
+  background: radial-gradient(40% 50% at 25% 35%, var(--teal), transparent 70%),
+              radial-gradient(40% 50% at 78% 30%, var(--gold), transparent 70%),
+              radial-gradient(45% 55% at 60% 85%, var(--copper2), transparent 70%);
+  background-size: 160% 160%; animation: sc-drift 14s ease-in-out infinite alternate; }
+@keyframes sc-drift { 0% { background-position: 0% 0%; transform: scale(1); } 100% { background-position: 100% 100%; transform: scale(1.06); } }
+
+.showcase .browser { padding: 26px 7px 7px; border: 1px solid rgba(255,255,255,.7); }
+.showcase .browser i { top: 9px; width: 9px; height: 9px; }
+.showcase .browser img { width: 100%; }
+.sc-front { position: relative; z-index: 2; width: 86%; transform: rotateY(-9deg) rotateX(4deg) rotateZ(-.6deg);
+  transform-origin: 30% 50%; transition: transform .6s cubic-bezier(.2,.8,.2,1), box-shadow .6s;
+  box-shadow: 0 40px 70px -30px rgba(31, 51, 84, .55), 0 8px 18px -10px rgba(31, 51, 84, .35); }
+.sc-back { position: absolute; z-index: 1; right: 0; top: 8px; width: 64%; opacity: .92;
+  transform: rotateY(-14deg) rotateX(4deg) translateZ(-60px); transition: transform .6s cubic-bezier(.2,.8,.2,1); }
+.showcase:hover .sc-front { transform: rotateY(0) rotateX(0) rotateZ(0) translateY(-6px); box-shadow: 0 50px 80px -30px rgba(31, 51, 84, .6); }
+.showcase:hover .sc-back { transform: rotateY(-4deg) translateX(14px) translateY(-10px) translateZ(-60px); }
+
+/* phone version (PUNCH) */
+.sc-phone { display: flex; justify-content: center; min-height: 520px; }
+.sc-phone .phone { width: 230px; }
+.sc-phone .phone .screen img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.sc-phone .sc-front { width: 230px; margin-right: 150px; transform: rotateY(12deg) rotateZ(-3deg); }
+.sc-phone .sc-back { width: 200px; right: auto; left: 50%; top: 80px; transform: rotateY(18deg) rotateZ(5deg) translateZ(-60px); }
+.sc-phone:hover .sc-front { transform: rotateY(0) rotateZ(0) translateY(-6px); }
+.sc-phone:hover .sc-back { transform: rotateY(8deg) rotateZ(7deg) translateX(16px) translateZ(-60px); }
+
+/* floating glass chips */
+.sc-chip { position: absolute; z-index: 3; display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px 9px 9px;
+  border-radius: 999px; font: 600 13.5px/1.2 Poppins, "Segoe UI", sans-serif; color: var(--navy); white-space: nowrap;
+  background: rgba(255,255,255,.82); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,.95); box-shadow: 0 14px 30px -14px rgba(31, 51, 84, .55);
+  animation: sc-float 6s ease-in-out infinite; }
+.sc-chip b { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; font-size: 15px;
+  background: linear-gradient(135deg, var(--gold2), var(--gold)); }
+.sc-chip.c1 { left: 0; top: 4px; }
+.sc-chip.c2 { right: 0; top: 46%; animation-delay: -2s; }
+.sc-chip.c2 b { background: linear-gradient(135deg, #7FD3DF, var(--teal)); }
+.sc-chip.c3 { left: 6%; bottom: 6px; animation-delay: -4s; }
+.sc-chip.c3 b { background: linear-gradient(135deg, #F2A47A, var(--copper2)); }
+@keyframes sc-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+.p-cap a { color: var(--teal); font-weight: 600; text-decoration: none; }
+.p-cap a:hover { text-decoration: underline; }
+
+@media (max-width: 900px) { .p-art { max-width: 620px; margin: 0 auto; width: 100%; } }
+@media (max-width: 560px) {
+  .showcase { padding: 30px 0 44px; }
+  .sc-chip { font-size: 12px; padding: 6px 11px 6px 6px; gap: 6px; }
+  .sc-chip b { width: 22px; height: 22px; font-size: 12px; }
+  .sc-phone { min-height: 430px; }
+  .sc-phone .sc-front { width: 190px; margin-right: 110px; }
+  .sc-phone .sc-back { width: 165px; left: 46%; }
+  .sc-phone .phone { border-radius: 32px; padding: 9px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sc-glow, .sc-chip { animation: none; }
+  .sc-front, .sc-back { transition: none; }
+}
