@@ -1,0 +1,117 @@
+{
+ "gst_rate": 18,
+ "home_state": "Madhya Pradesh",
+ "items": [
+  {
+   "code": "NX-BOOK",
+   "details": "NEXTACH BOOK - Accounts & Inventory Management System (GST) (Free Software)",
+   "discount": 100,
+   "hsn": "997331",
+   "offer": 0,
+   "price": 19999,
+   "validity": "Free - Lifetime"
+  },
+  {
+   "code": "NX-PUNCH",
+   "details": "NEXTACH PUNCH - Staff Attendance & Payroll App (Free Software)",
+   "discount": 100,
+   "hsn": "997331",
+   "offer": 0,
+   "price": 14999,
+   "validity": "Free - Lifetime"
+  },
+  {
+   "code": "NX-FEE",
+   "details": "NEXTACH FEE - Tutorial & Coaching Institute Management System (Free Software)",
+   "discount": 100,
+   "hsn": "997331",
+   "offer": 0,
+   "price": 14999,
+   "validity": "Free - Lifetime"
+  },
+  {
+   "code": "NX-DORMA",
+   "details": "NEXTACH DORMA - Hostel & PG Management System (Free Software)",
+   "discount": 100,
+   "hsn": "997331",
+   "offer": 0,
+   "price": 14999,
+   "validity": "Free - Lifetime"
+  },
+  {
+   "code": "NX-BCMS",
+   "details": "NEXTACH ACCESS - Annual Fee (Updates, Support & Consultancy) - 1 Company + 1 Admin + 2 Users (PUNCH: + 5 Employees)",
+   "discount": 0,
+   "hsn": "997331",
+   "offer": 1999,
+   "price": 1999,
+   "validity": "1 Year"
+  },
+  {
+   "code": "NX-AUSS",
+   "details": "Extra User",
+   "discount": 0,
+   "hsn": "997331",
+   "offer": 249,
+   "price": 249,
+   "validity": "1 Year"
+  },
+  {
+   "code": "NX-ALCS",
+   "details": "Extra Location (Godown / Store)",
+   "discount": 0,
+   "hsn": "997331",
+   "offer": 249,
+   "price": 249,
+   "validity": "1 Year"
+  },
+  {
+   "code": "NX-ABRS",
+   "details": "Extra Company / Branch",
+   "discount": 0,
+   "hsn": "997331",
+   "offer": 999,
+   "price": 999,
+   "validity": "1 Year"
+  },
+  {
+   "code": "NX-AEMS",
+   "details": "Extra 5 Employees (PUNCH)",
+   "discount": 0,
+   "hsn": "997331",
+   "offer": 499,
+   "price": 499,
+   "validity": "1 Year"
+  },
+  {
+   "code": "NX-RSPW",
+   "details": "Admin Password Reset",
+   "discount": 0,
+   "hsn": "998313",
+   "offer": 199,
+   "price": 199,
+   "validity": "1 Time"
+  },
+  {
+   "code": "NX-ONSP",
+   "details": "Remote Login Setup (Browser / Mobile)",
+   "discount": 0,
+   "hsn": "998313",
+   "offer": 999,
+   "price": 999,
+   "validity": "1 Year"
+  }
+ ],
+ "seller": {
+  "address": "146, Khatiwala Tank, Indore - 452014, MP, India",
+  "care": "+91 9109955733",
+  "care_email": "nextachcare@gmail.com",
+  "email": "nextach53@gmail.com",
+  "gstin": "23AHSPG1884F1Z9",
+  "name": "NEXTACH",
+  "phone": "+91 7000215253",
+  "tagline": "EFFORTLESS MANAGEMENT",
+  "website": "https://nextach.in"
+ },
+ "valid_days": 15
+}
