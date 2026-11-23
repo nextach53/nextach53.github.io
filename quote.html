@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get your quotation | NEXTACH</title>
+<meta name="description" content="Choose NEXTACH BOOK, PUNCH, FEE or DORMA, tell us what you need and get your quotation as a PDF on WhatsApp in a few minutes. Free software - pay only NEXTACH ACCESS and the add-ons you need.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://nextach.in/quote.html">
+<meta name="theme-color" content="#1F3354">
+<link rel="icon" href="nextach_mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=7638e509">
+</head>
+<body class="quote-page">
+<header class="nav" id="top">
+  <div class="wrap nav-in">
+    <a class="logo" href="index.html"><img src="nextach_mark.png" alt="">NEXTACH</a>
+    <nav class="links">
+      <a href="index.html#products">Products</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap q-main">
+  <div class="q-head">
+    <span class="eyebrow">Quotation</span>
+    <h1>Get your quotation on WhatsApp</h1>
+    <p>Choose your products, tell us what you need and we send the quotation <b>as a PDF to your WhatsApp</b> in a few minutes.
+      The software is <b>free</b> - you pay only <b>NEXTACH ACCESS</b> per year and the add-ons you need.</p>
+  </div>
+
+  <form id="q-form" class="q-form" novalidate>
+    <section class="q-card">
+      <h2><span class="q-num">1</span> Choose the products</h2>
+      <div class="q-prods" id="q-prods"><!-- filled by quote.js --></div>
+      <p class="q-hint" id="q-pair" hidden><b>BOOK + PUNCH offer:</b> PUNCH needs no ACCESS of its own - only the employees are charged (every 5).</p>
+    </section>
+
+    <section class="q-card">
+      <h2><span class="q-num">2</span> Your requirement</h2>
+      <div id="q-reqs"><p class="q-hint">Choose a product above.</p></div>
+      <label class="q-full">Anything else you need? (optional)
+        <textarea name="notes" rows="3" maxlength="600" placeholder="e.g. 2 shops in Indore, GST billing with barcode, need training for 2 staff"></textarea></label>
+    </section>
+
+    <section class="q-card">
+      <h2><span class="q-num">3</span> Your details</h2>
+      <div class="q-grid">
+        <label>Company / institute name *<input name="name" required maxlength="120" autocomplete="organization"></label>
+        <label>Contact person *<input name="person" required maxlength="120" autocomplete="name"></label>
+        <label>WhatsApp number *<input name="mobile" required maxlength="20" inputmode="tel" autocomplete="tel" placeholder="98200 12345 or +971 50 123 4567"></label>
+        <label>E-mail (optional)<input name="email" type="email" maxlength="120" autocomplete="email"></label>
+        <label>City *<input name="city" required maxlength="60" autocomplete="address-level2"></label>
+        <label>State *<select name="state" required id="q-state"><option value="">Choose…</option></select></label>
+        <label>GSTIN (optional - for your GST bill)<input name="gstin" maxlength="15" placeholder="e.g. 23ABCDE1234F1Z5" style="text-transform:uppercase"></label>
+        <label>Referral code (optional - if a NEXTACH customer referred you)<input name="ref_code" maxlength="20" placeholder="e.g. NX-AB12CD" style="text-transform:uppercase" autocomplete="off"></label>
+        <input class="q-hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      </div>
+    </section>
+
+    <aside class="q-sum" id="q-sum" aria-live="polite">
+      <h3>Your estimate</h3>
+      <div id="q-lines"><p class="q-hint">Choose a product to see the price.</p></div>
+      <p class="q-small">Prices from our current price list. The PDF quotation on WhatsApp is the final one.</p>
+      <button class="btn btn-wa btn-lg q-send" type="submit" id="q-send"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><path fill="#fff" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3z"/></svg>Send me the quotation</button>
+      <div class="q-msg" id="q-msg" role="status"></div>
+      <p class="q-small">We use your details only for this quotation and to contact you about it. See our <a href="privacy.html">privacy policy</a>.</p>
+    </aside>
+  </form>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in"><span><img src="nextach_mark.png" alt="">© 2026 NEXTACH · Effortless Management · GSTIN 23AHSPG1884F1Z9</span>
+    <span><a href="index.html">Home</a> · <a href="privacy.html">Privacy policy</a></span></div>
+</footer>
+<script src="quote.js?v=49680f54"></script>
+</body>
+</html>
