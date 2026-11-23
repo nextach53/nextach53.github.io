@@ -40,25 +40,25 @@
   },
   {
    "code": "NX-BCMS",
-   "details": "NEXTACH ACCESS - Annual Fee (Updates, Support & Consultancy) - 1 Company + 1 Admin + 2 Users (PUNCH: + 5 Employees)",
+   "details": "NEXTACH ACCESS - Annual Fee (Updates, Support & Consultancy)",
    "discount": 0,
    "hsn": "997331",
-   "offer": 2499,
-   "price": 2499,
+   "offer": 999,
+   "price": 999,
    "validity": "1 Year"
   },
   {
    "code": "NX-AUSS",
-   "details": "Extra User",
+   "details": "User",
    "discount": 0,
    "hsn": "997331",
-   "offer": 249,
-   "price": 249,
+   "offer": 149,
+   "price": 149,
    "validity": "1 Year"
   },
   {
    "code": "NX-ALCS",
-   "details": "Extra Location (Godown / Store)",
+   "details": "Store",
    "discount": 0,
    "hsn": "997331",
    "offer": 249,
@@ -67,20 +67,20 @@
   },
   {
    "code": "NX-ABRS",
-   "details": "Extra Company / Branch",
-   "discount": 0,
-   "hsn": "997331",
-   "offer": 999,
-   "price": 999,
-   "validity": "1 Year"
-  },
-  {
-   "code": "NX-AEMS",
-   "details": "Extra 5 Employees (PUNCH)",
+   "details": "Company",
    "discount": 0,
    "hsn": "997331",
    "offer": 499,
    "price": 499,
+   "validity": "1 Year"
+  },
+  {
+   "code": "NX-AEMS",
+   "details": "Employees (PUNCH)",
+   "discount": 0,
+   "hsn": "997331",
+   "offer": 149,
+   "price": 149,
    "validity": "1 Year"
   },
   {
@@ -97,8 +97,8 @@
    "details": "Remote Login Setup (Browser / Mobile)",
    "discount": 0,
    "hsn": "998313",
-   "offer": 999,
-   "price": 999,
+   "offer": 1499,
+   "price": 1499,
    "validity": "1 Year"
   }
  ],
