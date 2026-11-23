@@ -43,11 +43,12 @@
       var r = req[p] || {}, pair = p === "PUNCH" && chosen.BOOK;
       add("NX-" + p, 1);
       if (!pair) add("NX-BCMS", 1);
-      add("NX-AUSS", clamp(r.users, 1, 500, 3) - 3);
+      // 23-11-2026: NEXTACH ACCESS = support & consultancy only; every login, company / branch and PUNCH employee is charged
+      add("NX-AUSS", clamp(r.users, 1, 500, 1));
       var br = p === "PUNCH" ? 1 : clamp(r.branches, 1, 100, 1);
-      add("NX-ABRS", br - 1);
+      add("NX-ABRS", pair ? 0 : br);
       if (p === "BOOK") add("NX-ALCS", clamp(r.locations, 1, 200, 1) - br);
-      if (p === "PUNCH") { var e = clamp(r.employees, 1, 10000, 5); add("NX-AEMS", pair ? Math.ceil(e / 5) : Math.ceil(Math.max(0, e - 5) / 5)); }
+      if (p === "PUNCH") add("NX-AEMS", clamp(r.employees, 1, 10000, 5));
       if (r.remote) add("NX-ONSP", 1);
     });
     return out;
