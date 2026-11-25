@@ -1,46 +1,69 @@
 {
+ "bundle": {
+  "BOOK": {
+   "branches": 5,
+   "code": "NX-NXAC",
+   "locations": 10,
+   "users": 16
+  },
+  "DORMA": {
+   "branches": 5,
+   "code": "NX-NXAC",
+   "users": 16
+  },
+  "FEE": {
+   "branches": 5,
+   "code": "NX-NXAC",
+   "users": 16
+  },
+  "PUNCH": {
+   "code": "NX-PNAC",
+   "employees": 0,
+   "users": 3
+  }
+ },
  "gst_rate": 18,
  "home_state": "Madhya Pradesh",
  "items": [
   {
    "code": "NX-BOOK",
-   "details": "NEXTACH BOOK - Accounts & Inventory Management System (GST) (Free Software)",
+   "details": "NEXTACH BOOK - Accounts & Inventory Management System (GST) - One-time Licence",
    "discount": 0,
    "hsn": "997331",
    "offer": 5999,
    "price": 5999,
-   "validity": "Free - Lifetime"
+   "validity": "Lifetime (One Time)"
   },
   {
    "code": "NX-PUNCH",
-   "details": "NEXTACH PUNCH - Staff Attendance & Payroll App (Free Software)",
+   "details": "NEXTACH PUNCH - Staff Attendance & Payroll App - One-time Licence",
    "discount": 0,
    "hsn": "997331",
    "offer": 4999,
    "price": 4999,
-   "validity": "Free - Lifetime"
+   "validity": "Lifetime (One Time)"
   },
   {
    "code": "NX-FEE",
-   "details": "NEXTACH FEE - Tutorial & Coaching Institute Management System (Free Software)",
+   "details": "NEXTACH FEE - Tutorial & Coaching Institute Management System - One-time Licence",
    "discount": 0,
    "hsn": "997331",
    "offer": 4999,
    "price": 4999,
-   "validity": "Free - Lifetime"
+   "validity": "Lifetime (One Time)"
   },
   {
    "code": "NX-DORMA",
-   "details": "NEXTACH DORMA - Hostel & PG Management System (Free Software)",
+   "details": "NEXTACH DORMA - Hostel & PG Management System - One-time Licence",
    "discount": 0,
    "hsn": "997331",
    "offer": 2999,
    "price": 2999,
-   "validity": "Free - Lifetime"
+   "validity": "Lifetime (One Time)"
   },
   {
    "code": "NX-NXAC",
-   "details": "NEXTACH ACCESS - Annual Fee (Updates, Support & Consultancy)",
+   "details": "NEXTACH Access & Support - Annual (5 Branches; 1 Admin; per branch 1 Manager + 2 Users + 2 Locations)",
    "discount": 0,
    "hsn": "997331",
    "offer": 2999,
@@ -49,7 +72,7 @@
   },
   {
    "code": "NX-AUSS",
-   "details": "User",
+   "details": "Extra User",
    "discount": 0,
    "hsn": "997331",
    "offer": 249,
@@ -58,7 +81,7 @@
   },
   {
    "code": "NX-ALCS",
-   "details": "Store",
+   "details": "Extra Location (Godown / Store)",
    "discount": 0,
    "hsn": "997331",
    "offer": 249,
@@ -67,7 +90,7 @@
   },
   {
    "code": "NX-ABRS",
-   "details": "Company / Branch",
+   "details": "Extra Company / Branch",
    "discount": 0,
    "hsn": "997331",
    "offer": 499,
@@ -76,7 +99,7 @@
   },
   {
    "code": "NX-AEMS",
-   "details": "Employees (PUNCH)",
+   "details": "Employee (PUNCH) - per employee",
    "discount": 0,
    "hsn": "997331",
    "offer": 99,
@@ -103,7 +126,7 @@
   },
   {
    "code": "NX-PNAC",
-   "details": "Punch ACCESS - Annual Fee (Updates, Support & Consultancy)",
+   "details": "PUNCH Access & Support - Annual (1 Admin + 2 Users)",
    "discount": 0,
    "hsn": "997331",
    "offer": 499,
