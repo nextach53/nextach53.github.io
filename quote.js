@@ -14,15 +14,18 @@
   // product -> its requirement fields (key, label, default, min, max)
   var PRODUCTS = [
     { p: "BOOK", name: "NEXTACH BOOK", what: "Accounts, billing, GST & stock", img: "product_book.png",
-      fields: [["users", "Users (including Admin)", 3, 1, 500], ["branches", "Companies / branches", 1, 1, 100],
-               ["locations", "Stock locations (godowns / stores) in total", 1, 1, 200]] },
+      fields: [["users", "Users (Admin + Managers + Users)", 16, 1, 500], ["branches", "Companies / branches", 5, 1, 100],
+               ["locations", "Stock locations (godowns / stores) in total", 10, 1, 200]] },
     { p: "PUNCH", name: "NEXTACH PUNCH", what: "Staff attendance & payroll (Android)", img: "product_punch.png",
       fields: [["users", "Users (including Admin)", 3, 1, 500], ["employees", "Employees", 5, 1, 10000]] },
     { p: "FEE", name: "NEXTACH FEE", what: "Coaching & tutorial institutes", img: "product_fee.png",
-      fields: [["users", "Users (including Admin)", 3, 1, 500], ["branches", "Branches", 1, 1, 100]] },
+      fields: [["users", "Users (Admin + Managers + Users)", 16, 1, 500], ["branches", "Branches", 5, 1, 100]] },
     { p: "DORMA", name: "NEXTACH DORMA", what: "Hostels & PGs", img: "product_dorma.png",
-      fields: [["users", "Users (including Admin)", 3, 1, 500], ["branches", "Branches / hostels", 1, 1, 100]] }
+      fields: [["users", "Users (Admin + Managers + Users)", 16, 1, 500], ["branches", "Branches / hostels", 5, 1, 100]] }
   ];
+  // 25-11-2026 (owner): what the yearly Access & Support includes - quote.json "bundle" (sa_app ACCESS_BUNDLE) wins
+  var BUNDLE = { BOOK: { code: "NX-NXAC", branches: 5, users: 16, locations: 10 }, FEE: { code: "NX-NXAC", branches: 5, users: 16 },
+    DORMA: { code: "NX-NXAC", branches: 5, users: 16 }, PUNCH: { code: "NX-PNAC", users: 3, employees: 0 } };
   var PRICE = {}, chosen = {}, req = {};
   var $ = function (id) { return document.getElementById(id); };
   var form = $("q-form");
@@ -40,14 +43,13 @@
     function add(code, qty) { if (qty > 0) { if (code in idx) out[idx[code]].qty += qty; else { idx[code] = out.length; out.push({ code: code, qty: qty }); } } }
     PRODUCTS.forEach(function (d) {
       var p = d.p; if (!chosen[p]) return;
-      var r = req[p] || {}, pair = p === "PUNCH" && chosen.BOOK;
+      var r = req[p] || {}, b = BUNDLE[p];
+      // 25-11-2026: one-time software + its Access & Support (bundle) + only what is above the bundle; BOOK + PUNCH pay both
       add("NX-" + p, 1);
-      if (!pair) add("NX-BCMS", 1);
-      // 23-11-2026: NEXTACH ACCESS = support & consultancy only; every login, company / branch and PUNCH employee is charged
-      add("NX-AUSS", clamp(r.users, 1, 500, 1));
-      var br = p === "PUNCH" ? 1 : clamp(r.branches, 1, 100, 1);
-      add("NX-ABRS", pair ? 0 : br);
-      if (p === "BOOK") add("NX-ALCS", clamp(r.locations, 1, 200, 1) - br);
+      add(b.code, 1);
+      add("NX-AUSS", clamp(r.users, 1, 500, b.users) - b.users);
+      if (b.branches) add("NX-ABRS", clamp(r.branches, 1, 100, b.branches) - b.branches);
+      if (b.locations) add("NX-ALCS", clamp(r.locations, 1, 200, b.locations) - b.locations);
       if (p === "PUNCH") add("NX-AEMS", clamp(r.employees, 1, 10000, 5));
       if (r.remote) add("NX-ONSP", 1);
     });
@@ -97,13 +99,13 @@
     var net = 0, rows = lines.map(function (l) {
       var it = PRICE[l.code]; if (!it) return "";
       var amt = l.qty * it.offer; net += amt;
-      return "<tr><td>" + esc(it.details.replace(/ \(Free Software\)$/, "")) + (l.qty > 1 ? " × " + l.qty : "") + "</td><td class=\"r\">" +
+      return "<tr><td>" + esc(it.details.replace(/ \(Free Software\)$/, "")) + (it.validity ? " <small>(" + esc(it.validity) + ")</small>" : "") + (l.qty > 1 ? " × " + l.qty : "") + "</td><td class=\"r\">" +
         (amt ? inr(amt) : (it.price ? "<s>" + inr(it.price * l.qty) + "</s> " : "") + "<b>Free</b>") + "</td></tr>";
     }).join("");
     var st = form.state.value, gstin = (form.gstin.value || "").toUpperCase();
     var rate = st === "Outside India" ? 0 : GST, intra = st === HOME || gstin.slice(0, 2) === "23";
     var tax = rate ? (intra ? 2 * Math.round(net * rate / 200) : Math.round(net * rate / 100)) : 0;
-    $("q-lines").innerHTML = '<table class="q-tab">' + rows + '<tr class="q-net"><td>Net amount (per year)</td><td class="r">' + inr(net) + "</td></tr>" +
+    $("q-lines").innerHTML = '<table class="q-tab">' + rows + '<tr class="q-net"><td>Net amount</td><td class="r">' + inr(net) + "</td></tr>" +
       "<tr><td>" + (rate ? (st ? (intra ? "CGST 9% + SGST 9%" : "IGST 18%") : "GST 18%") : "GST - not applicable") + '</td><td class="r">' + inr(tax) + "</td></tr>" +
       '<tr class="q-total"><td>Grand total</td><td class="r">' + inr(net + tax) + "</td></tr></table>";
   }
@@ -152,6 +154,7 @@
   drawProducts();
   fetch("quote.json", { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (d) {
     (d.items || []).forEach(function (it) { PRICE[it.code] = it; });
+    if (d.bundle) BUNDLE = d.bundle;
     if (d.home_state) HOME = d.home_state;
     if (d.gst_rate != null) GST = d.gst_rate;
     calc();
