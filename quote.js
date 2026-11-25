@@ -78,8 +78,10 @@
           if (r[f[0]] == null) r[f[0]] = f[2];
           return "<label>" + f[1] + '<input type="number" min="' + f[3] + '" max="' + f[4] + '" value="' + r[f[0]] + '" data-p="' + d.p + '" data-k="' + f[0] + '"></label>';
         }).join("") +
-        '<label class="q-check"><input type="checkbox" data-p="' + d.p + '" data-k="remote"' + (r.remote ? " checked" : "") +
-        "> Remote login (use it from a browser / mobile outside your office)</label></div></div>";
+        '<label class="q-check"><input type="checkbox" data-p="' + d.p + '" data-k="remote"' + (r.remote ? " checked" : "") + "> " +
+        // 25-11-2026: for PUNCH the online service = location punching (staff at other sites punch by GPS in PUNCH Wave)
+        (d.p === "PUNCH" ? "Location punching (staff at branches / sites punch by GPS in PUNCH Wave; face and Bluetooth punching are free)"
+                         : "Remote login (use it from a browser / mobile outside your office)") + "</label></div></div>";
     }).join("") || '<p class="q-hint">Choose a product above.</p>';
     $("q-reqs").querySelectorAll("input").forEach(function (i) {
       i.addEventListener("input", function () { req[i.dataset.p][i.dataset.k] = i.type === "checkbox" ? i.checked : i.value; calc(); });
@@ -111,7 +113,7 @@
   function waFallback() {
     var f = form, names = PRODUCTS.filter(function (d) { return chosen[d.p]; }).map(function (d) {
       var r = req[d.p] || {};
-      return d.name + " (" + d.fields.map(function (x) { return x[1].split(" (")[0] + ": " + r[x[0]]; }).join(", ") + (r.remote ? ", remote login" : "") + ")";
+      return d.name + " (" + d.fields.map(function (x) { return x[1].split(" (")[0] + ": " + r[x[0]]; }).join(", ") + (r.remote ? (d.p === "PUNCH" ? ", location punching" : ", remote login") : "") + ")";
     });
     return "https://wa.me/" + WA + "?text=" + encodeURIComponent("Hello NEXTACH, please send me a quotation.\n\n" + names.join("\n") +
       "\n\nCompany: " + f.name.value + "\nContact: " + f.person.value + "\nCity: " + f.city.value + ", " + f.state.value +
