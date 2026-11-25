@@ -5,46 +5,46 @@
   {
    "code": "NX-BOOK",
    "details": "NEXTACH BOOK - Accounts & Inventory Management System (GST) (Free Software)",
-   "discount": 50,
+   "discount": 0,
    "hsn": "997331",
-   "offer": 5000,
-   "price": 9999,
+   "offer": 4999,
+   "price": 4999,
    "validity": "Free - Lifetime"
   },
   {
    "code": "NX-PUNCH",
    "details": "NEXTACH PUNCH - Staff Attendance & Payroll App (Free Software)",
-   "discount": 50,
+   "discount": 0,
    "hsn": "997331",
-   "offer": 5000,
-   "price": 9999,
+   "offer": 4999,
+   "price": 4999,
    "validity": "Free - Lifetime"
   },
   {
    "code": "NX-FEE",
    "details": "NEXTACH FEE - Tutorial & Coaching Institute Management System (Free Software)",
-   "discount": 50,
+   "discount": 0,
    "hsn": "997331",
-   "offer": 5000,
-   "price": 9999,
+   "offer": 4999,
+   "price": 4999,
    "validity": "Free - Lifetime"
   },
   {
    "code": "NX-DORMA",
    "details": "NEXTACH DORMA - Hostel & PG Management System (Free Software)",
-   "discount": 50,
+   "discount": 0,
    "hsn": "997331",
-   "offer": 5000,
-   "price": 9999,
+   "offer": 2999,
+   "price": 2999,
    "validity": "Free - Lifetime"
   },
   {
-   "code": "NX-BCMS",
+   "code": "NX-NXAC",
    "details": "NEXTACH ACCESS - Annual Fee (Updates, Support & Consultancy)",
    "discount": 0,
    "hsn": "997331",
-   "offer": 499,
-   "price": 499,
+   "offer": 2499,
+   "price": 2499,
    "validity": "1 Year"
   },
   {
@@ -79,8 +79,8 @@
    "details": "Employees (PUNCH)",
    "discount": 0,
    "hsn": "997331",
-   "offer": 149,
-   "price": 149,
+   "offer": 99,
+   "price": 99,
    "validity": "1 Year"
   },
   {
@@ -99,6 +99,15 @@
    "hsn": "998313",
    "offer": 499,
    "price": 499,
+   "validity": "1 Year"
+  },
+  {
+   "code": "NX-PNAC",
+   "details": "Punch ACCESS - Annual Fee (Updates, Support & Consultancy)",
+   "discount": 0,
+   "hsn": "997331",
+   "offer": 999,
+   "price": 999,
    "validity": "1 Year"
   }
  ],
