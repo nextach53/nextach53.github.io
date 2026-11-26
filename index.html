@@ -48,7 +48,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=7638e509">
+<link rel="stylesheet" href="style.css?v=360df4c6">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa-ico" viewBox="0 0 32 32"><path fill="#fff" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.4 10.4 0 0 1-1.8-5.7C5 9.9 9.9 5.2 16 5.2s11 4.7 11 10.6-4.9 10.6-11 10.6zm6-7.9c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.7-1.6-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6.3-.5c.1-.2 0-.4 0-.6l-1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.1-.3-.2-.7-.4z"/></symbol></svg>
@@ -77,31 +77,40 @@
   </nav>
 </header>
 
-<!-- ============ HERO ============ -->
-<section class="hero">
+<!-- ============ HERO (26-11-2026: all 4 products + BOOK + PUNCH, 4 screens, common features) ============ -->
+<section class="hero hero2">
   <div class="blob b1"></div><div class="blob b2"></div>
   <div class="wrap hero-in">
     <div class="hero-text reveal">
-      <span class="pill">✦ Effortless Management</span>
-      <h1>Smart Software, <span class="hl">Zero Headaches</span></h1>
-      <p>Accounts, staff attendance, coaching institutes and hostels - simple, reliable software developed in India. Free trial, WhatsApp support, and your data stays on your own computer or phone.</p>
-      <div class="hero-cta">
-        <a class="btn btn-gold btn-lg" href="#businesses">See software for your business</a>
-        <a class="btn btn-ghost btn-lg wa-help" href="#"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><use href="#wa-ico"></use></svg>WhatsApp us</a>
+      <span class="pill">✦ Effortless Management · Made in India</span>
+      <h1>Run your business, <span class="hl">not your software.</span></h1>
+      <p>Four ready-to-use products for accounts, staff, coaching institutes and hostels. Pay once, keep your data on your own computer or phone &ndash; and reach it from anywhere.</p>
+      <div class="h2-prods">
+        <a href="#book"><img src="product_book.png" alt=""><span><b>NEXTACH BOOK</b><small>Billing, GST / VAT, stock &amp; accounts</small></span></a>
+        <a href="#punch"><img src="product_punch.png" alt=""><span><b>NEXTACH PUNCH</b><small>Face / ID-card attendance &amp; payroll</small></span></a>
+        <a href="#fee"><img src="product_fee.png" alt=""><span><b>NEXTACH FEE</b><small>Coaching institutes: admissions &amp; fees</small></span></a>
+        <a href="#dorma"><img src="product_dorma.png" alt=""><span><b>NEXTACH DORMA</b><small>Hostels &amp; PGs: beds, rent &amp; deposits</small></span></a>
       </div>
-      <ul class="facts">
-        <li><b>4</b> products</li>
-        <li><b>5</b> countries</li>
-        <li><b>100%</b> offline data</li>
-        <li data-nx-price="low"><b>₹2,999</b> one-time</li>
-        <li><b>Free</b> trial</li>
-        <li><b>WhatsApp</b> support</li>
-      </ul>
+      <a class="h2-combo" href="#punch"><span class="h2-logos"><img src="product_book.png" alt=""><i>+</i><img src="product_punch.png" alt=""></span>
+        <span><b>BOOK + PUNCH &ndash; accounts &amp; attendance together</b><small>Buy BOOK and the PUNCH software is <em>FREE</em>. Salaries from PUNCH into BOOK &ndash; coming soon.</small></span></a>
     </div>
-    <div class="hero-art reveal">
-      <div class="frame f-back"><img src="shot_fee.jpg" alt="NEXTACH FEE dashboard"></div>
-      <div class="frame f-front"><img src="shot_book.jpg" alt="NEXTACH BOOK dashboard"></div>
+    <div class="h2-art reveal" aria-label="Screens of the four NEXTACH products">
+      <figure class="h2-scr s-dorma"><img src="shot_dorma.jpg" alt="NEXTACH DORMA bed chart"><figcaption>DORMA</figcaption></figure>
+      <figure class="h2-scr s-fee"><img src="shot_fee.jpg" alt="NEXTACH FEE dashboard"><figcaption>FEE</figcaption></figure>
+      <figure class="h2-scr s-book"><img src="shot_book.jpg" alt="NEXTACH BOOK dashboard"><figcaption>BOOK</figcaption></figure>
+      <figure class="h2-phone"><img src="punch_home.jpg" alt="NEXTACH PUNCH app"><figcaption>PUNCH</figcaption></figure>
     </div>
+  </div>
+  <div class="wrap h2-feat-wrap reveal">
+    <p class="h2-tag">Offline when you need it. <span>Online when you want it.</span></p>
+    <ul class="h2-feats">
+      <li><span>📴</span><b>Works offline</b><small>No Internet needed to bill or punch</small></li>
+      <li><span>🌐</span><b>Online access</b><small>Use it from home, phone or branch</small></li>
+      <li><span>🔒</span><b>Your data, your device</b><small>Stays on your own PC or phone</small></li>
+      <li><span>💬</span><b>WhatsApp built in</b><small>Bills, receipts &amp; reminders</small></li>
+      <li><span>🏢</span><b>Multi-branch</b><small>GST / VAT in 5 countries</small></li>
+      <li><span>🔑</span><span class="h2-price" data-nx-price="low"><b>₹2,999</b> one-time</span><small>Pay once &middot; 15-day free trial</small></li>
+    </ul>
   </div>
 </section>
 
@@ -478,7 +487,7 @@ e58723e25fd0b01fcda374fc28e040664dab55a74f299d79b6be74aeb6767788  NEXTACH_DORMA_
     <textarea id="ask-q" rows="3" placeholder="Type your question (optional)"></textarea>
     <a class="btn btn-wa ask-send" id="ask-send" href="#"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><use href="#wa-ico"></use></svg>Send on WhatsApp</a>
   </section>
-  <button type="button" class="ask-btn ask-open" aria-controls="ask-panel" aria-expanded="false"><svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><use href="#wa-ico"></use></svg>Ask us</button>
+  <button type="button" class="ask-btn ask-open" aria-controls="ask-panel" aria-expanded="false"><svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><use href="#wa-ico"></use></svg>Need Help</button>
 </aside>
 
 <script src="site.js?v=7ce15ae0"></script>
