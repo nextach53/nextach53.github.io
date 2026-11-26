@@ -14,18 +14,18 @@
   // product -> its requirement fields (key, label, default, min, max)
   var PRODUCTS = [
     { p: "BOOK", name: "NEXTACH BOOK", what: "Accounts, billing, GST & stock", img: "product_book.png",
-      fields: [["users", "Users (Admin + Managers + Users)", 16, 1, 500], ["branches", "Companies / branches", 5, 1, 100],
+      fields: [["users", "Users (Admin + Managers + Users)", 11, 1, 500], ["branches", "Companies / branches", 5, 1, 100],
                ["locations", "Stock locations (godowns / stores) in total", 10, 1, 200]] },
     { p: "PUNCH", name: "NEXTACH PUNCH", what: "Staff attendance & payroll (Android)", img: "product_punch.png",
       fields: [["users", "Users (including Admin)", 3, 1, 500], ["employees", "Employees", 5, 1, 10000]] },
     { p: "FEE", name: "NEXTACH FEE", what: "Coaching & tutorial institutes", img: "product_fee.png",
-      fields: [["users", "Users (Admin + Managers + Users)", 16, 1, 500], ["branches", "Branches", 5, 1, 100]] },
+      fields: [["users", "Users (Admin + Managers + Users)", 11, 1, 500], ["branches", "Branches", 5, 1, 100]] },
     { p: "DORMA", name: "NEXTACH DORMA", what: "Hostels & PGs", img: "product_dorma.png",
-      fields: [["users", "Users (Admin + Managers + Users)", 16, 1, 500], ["branches", "Branches / hostels", 5, 1, 100]] }
+      fields: [["users", "Users (Admin + Managers + Users)", 11, 1, 500], ["branches", "Branches / hostels", 5, 1, 100]] }
   ];
   // 25-11-2026 (owner): what the yearly Access & Support includes - quote.json "bundle" (sa_app ACCESS_BUNDLE) wins
-  var BUNDLE = { BOOK: { code: "NX-NXAC", branches: 5, users: 16, locations: 10 }, FEE: { code: "NX-NXAC", branches: 5, users: 16 },
-    DORMA: { code: "NX-NXAC", branches: 5, users: 16 }, PUNCH: { code: "NX-PNAC", users: 3, employees: 0 } };
+  var BUNDLE = { BOOK: { code: "NX-NXAC", branches: 5, users: 11, locations: 10 }, FEE: { code: "NX-NXAC", branches: 5, users: 11 },
+    DORMA: { code: "NX-NXAC", branches: 5, users: 11 }, PUNCH: { code: "NX-PNAC", users: 3, employees: 0 } };
   var PRICE = {}, chosen = {}, req = {};
   var $ = function (id) { return document.getElementById(id); };
   var form = $("q-form");
@@ -40,12 +40,12 @@
   // ---- the same rules as Super Admin
   function wanted() {
     var out = [], idx = {};
-    function add(code, qty) { if (qty > 0) { if (code in idx) out[idx[code]].qty += qty; else { idx[code] = out.length; out.push({ code: code, qty: qty }); } } }
+    function add(code, qty, free) { if (qty > 0) { if (code in idx) out[idx[code]].qty += qty; else { idx[code] = out.length; out.push({ code: code, qty: qty, free: !!free }); } } }
     PRODUCTS.forEach(function (d) {
       var p = d.p; if (!chosen[p]) return;
       var r = req[p] || {}, b = BUNDLE[p];
       // 25-11-2026: one-time software + its Access & Support (bundle) + only what is above the bundle; BOOK + PUNCH pay both
-      add("NX-" + p, 1);
+      add("NX-" + p, 1, p === "PUNCH" && chosen.BOOK);   // 26-11-2026: with BOOK the PUNCH software is free
       add(b.code, 1);
       add("NX-AUSS", clamp(r.users, 1, 500, b.users) - b.users);
       if (b.branches) add("NX-ABRS", clamp(r.branches, 1, 100, b.branches) - b.branches);
@@ -98,9 +98,9 @@
     if (!Object.keys(PRICE).length) { $("q-lines").innerHTML = '<p class="q-hint">Your quotation will show the prices.</p>'; return; }
     var net = 0, rows = lines.map(function (l) {
       var it = PRICE[l.code]; if (!it) return "";
-      var amt = l.qty * it.offer; net += amt;
+      var amt = l.free ? 0 : l.qty * it.offer; net += amt;
       return "<tr><td>" + esc(it.details.replace(/ \(Free Software\)$/, "")) + (it.validity ? " <small>(" + esc(it.validity) + ")</small>" : "") + (l.qty > 1 ? " × " + l.qty : "") + "</td><td class=\"r\">" +
-        (amt ? inr(amt) : (it.price ? "<s>" + inr(it.price * l.qty) + "</s> " : "") + "<b>Free</b>") + "</td></tr>";
+        (amt ? inr(amt) : (it.price ? "<s>" + inr(it.price * l.qty) + "</s> " : "") + "<b>Free" + (l.free ? " with BOOK" : "") + "</b>") + "</td></tr>";
     }).join("");
     var st = form.state.value, gstin = (form.gstin.value || "").toUpperCase();
     var rate = st === "Outside India" ? 0 : GST, intra = st === HOME || gstin.slice(0, 2) === "23";
