@@ -117,7 +117,7 @@
   },
   {
    "code": "NX-ONSP",
-   "details": "Online Service - Remote Login & PUNCH Location Punching",
+   "details": "Online Service",
    "discount": 0,
    "hsn": "998313",
    "offer": 999,
@@ -126,7 +126,7 @@
   },
   {
    "code": "NX-PNAC",
-   "details": "PUNCH Access & Support - Annual (1 Admin + 2 Users)",
+   "details": "PUNCH Access & Support - Annual (1 Admin + 2 Users + Online)",
    "discount": 0,
    "hsn": "997331",
    "offer": 999,
