@@ -566,3 +566,52 @@ html { scroll-padding-top: 116px; }
 .price-cta { margin-top: 10px; }
 .contact-btns { display: flex; flex-direction: column; gap: 12px; }
 @media (max-width: 560px) { .contact-btns { width: 100%; } .contact-btns .btn { width: 100%; } }
+
+/* ---------- 26-11-2026 hero: 4 products + BOOK + PUNCH, 4 screens, common features ---------- */
+.hero2 { padding: 56px 0 30px; }
+.hero2 .hero-in { grid-template-columns: 1fr 1.02fr; gap: 36px; align-items: start; }
+.hero2 h1 { font-size: clamp(30px, 4.2vw, 48px); margin: 14px 0 12px; }
+.hero2 .hero-text > p { font-size: 17px; }
+.h2-prods { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 22px 0 12px; }
+.h2-prods a { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 14px; text-decoration: none; color: #fff;
+  background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.16); transition: background .15s, border-color .15s, transform .15s; }
+.h2-prods a:hover { background: rgba(255,255,255,.13); border-color: var(--gold); transform: translateY(-2px); }
+.h2-prods img { width: 40px; height: 40px; flex: none; border-radius: 10px; background: #fff; padding: 3px; object-fit: contain; }
+.h2-prods b { display: block; font: 700 15px/1.2 Poppins, sans-serif; }
+.h2-prods small { display: block; color: #C7D2E1; font-size: 12.5px; line-height: 1.35; margin-top: 2px; }
+.h2-combo { display: flex; align-items: center; gap: 14px; padding: 12px 14px; border-radius: 16px; text-decoration: none; color: var(--ink);
+  background: linear-gradient(135deg, var(--gold2), var(--gold)); box-shadow: 0 14px 30px -14px rgba(245,181,33,.9); transition: transform .15s; }
+.h2-combo:hover { transform: translateY(-2px); }
+.h2-logos { display: flex; align-items: center; gap: 4px; flex: none; }
+.h2-logos img { width: 36px; height: 36px; border-radius: 9px; background: #fff; padding: 3px; object-fit: contain; }
+.h2-logos i { font: 800 18px Poppins, sans-serif; font-style: normal; }
+.h2-combo b { display: block; font: 700 15px/1.25 Poppins, sans-serif; }
+.h2-combo small { display: block; font-size: 13px; line-height: 1.4; color: #3b2f12; margin-top: 2px; }
+.h2-combo em { font-style: normal; font-weight: 800; background: var(--navy); color: var(--gold2); padding: 0 6px; border-radius: 6px; }
+.h2-art { position: relative; height: 430px; margin-top: 6px; }
+.h2-art figure { position: absolute; margin: 0; }
+.h2-scr { width: 66%; border-radius: 12px; overflow: hidden; border: 5px solid rgba(255,255,255,.95); box-shadow: 0 26px 50px -20px rgba(0,0,0,.6); background: #fff; }
+.h2-scr img { width: 100%; height: auto; }
+.s-dorma { right: 0; top: 0; transform: rotate(3deg); opacity: .92; }
+.s-fee { left: 0; top: 70px; transform: rotate(-3deg); opacity: .95; }
+.s-book { left: 14%; top: 170px; width: 70%; z-index: 2; }
+.h2-phone { right: 2%; top: 120px; width: 23%; z-index: 3; border-radius: 22px; overflow: hidden; border: 6px solid #0e1a2c;
+  box-shadow: 0 30px 50px -16px rgba(0,0,0,.7); background: #0e1a2c; }
+.h2-phone img { width: 100%; height: auto; border-radius: 14px; }
+.h2-art figcaption { position: absolute; left: 8px; top: 8px; background: var(--navy); color: var(--gold2); font: 700 11px Poppins, sans-serif;
+  letter-spacing: 1px; padding: 3px 9px; border-radius: 20px; box-shadow: 0 4px 10px rgba(0,0,0,.3); }
+.h2-phone figcaption { left: 50%; transform: translateX(-50%); top: auto; bottom: 8px; }
+.h2-feat-wrap { position: relative; margin-top: 30px; }
+.h2-tag { text-align: center; font: 700 20px Poppins, sans-serif; color: #fff; margin: 0 0 14px; }
+.h2-tag span { color: var(--gold2); }
+.h2-feats { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+.h2-feats li { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14); border-radius: 14px; padding: 12px 12px 11px; color: #fff; }
+.h2-feats li > span:first-child { font-size: 22px; line-height: 1; display: block; margin-bottom: 6px; }
+.h2-feats b, .h2-price { display: block; font: 700 15px/1.25 Poppins, sans-serif; color: #fff; }
+.h2-price b { color: var(--gold2); }
+.h2-feats small { display: block; color: #C7D2E1; font-size: 12.5px; line-height: 1.35; margin-top: 3px; }
+@media (max-width: 1000px) { .h2-feats { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 900px) { .hero2 .hero-in { grid-template-columns: 1fr; } .h2-art { height: 340px; } }
+@media (max-width: 560px) { .h2-prods { grid-template-columns: 1fr; } .h2-feats { grid-template-columns: 1fr 1fr; } .h2-art { height: 310px; }
+  .s-fee { top: 48px; } .s-book { top: 128px; } .h2-phone { top: 92px; } .h2-art figcaption { font-size: 10px; padding: 2px 7px; }
+  .h2-tag { font-size: 17px; } }
