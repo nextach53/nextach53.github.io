@@ -4,17 +4,17 @@
    "branches": 5,
    "code": "NX-NXAC",
    "locations": 10,
-   "users": 16
+   "users": 11
   },
   "DORMA": {
    "branches": 5,
    "code": "NX-NXAC",
-   "users": 16
+   "users": 11
   },
   "FEE": {
    "branches": 5,
    "code": "NX-NXAC",
-   "users": 16
+   "users": 11
   },
   "PUNCH": {
    "code": "NX-PNAC",
@@ -63,7 +63,7 @@
   },
   {
    "code": "NX-NXAC",
-   "details": "NEXTACH Access & Support - Annual (5 Branches; 1 Admin; per branch 1 Manager + 2 Users + 2 Locations)",
+   "details": "NEXTACH Access & Support - Annual (5 Branches; 1 Admin; 1 Manager per branch + 5 Users (any branch) + 2 Locations per branch)",
    "discount": 0,
    "hsn": "997331",
    "offer": 2999,
