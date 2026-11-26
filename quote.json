@@ -66,8 +66,8 @@
    "details": "NEXTACH Access & Support - Annual (5 Branches; 1 Admin; 1 Manager per branch + 5 Users (any branch) + 2 Locations per branch)",
    "discount": 0,
    "hsn": "997331",
-   "offer": 2999,
-   "price": 2999,
+   "offer": 2499,
+   "price": 2499,
    "validity": "1 Year"
   },
   {
@@ -120,8 +120,8 @@
    "details": "Online Service - Remote Login & PUNCH Location Punching",
    "discount": 0,
    "hsn": "998313",
-   "offer": 499,
-   "price": 499,
+   "offer": 999,
+   "price": 999,
    "validity": "1 Year"
   },
   {
@@ -129,8 +129,8 @@
    "details": "PUNCH Access & Support - Annual (1 Admin + 2 Users)",
    "discount": 0,
    "hsn": "997331",
-   "offer": 499,
-   "price": 499,
+   "offer": 999,
+   "price": 999,
    "validity": "1 Year"
   }
  ],
