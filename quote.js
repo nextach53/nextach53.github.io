@@ -51,7 +51,7 @@
       if (b.branches) add("NX-ABRS", clamp(r.branches, 1, 100, b.branches) - b.branches);
       if (b.locations) add("NX-ALCS", clamp(r.locations, 1, 200, b.locations) - b.locations);
       if (p === "PUNCH") add("NX-AEMS", clamp(r.employees, 1, 10000, 5));
-      if (r.remote) add("NX-ONSP", 1);
+      if (r.remote && p !== "PUNCH") add("NX-ONSP", 1);   // 27-11-2026: PUNCH - location punching is in its Access & Support
     });
     return out;
   }
@@ -80,10 +80,10 @@
           if (r[f[0]] == null) r[f[0]] = f[2];
           return "<label>" + f[1] + '<input type="number" min="' + f[3] + '" max="' + f[4] + '" value="' + r[f[0]] + '" data-p="' + d.p + '" data-k="' + f[0] + '"></label>';
         }).join("") +
-        '<label class="q-check"><input type="checkbox" data-p="' + d.p + '" data-k="remote"' + (r.remote ? " checked" : "") + "> " +
-        // 25-11-2026: for PUNCH the online service = location punching (staff at other sites punch by GPS in PUNCH Wave)
-        (d.p === "PUNCH" ? "Location punching (staff at branches / sites punch by GPS in PUNCH Wave; face and Bluetooth punching are free)"
-                         : "Remote login (use it from a browser / mobile outside your office)") + "</label></div></div>";
+        // 27-11-2026: PUNCH - location punching (GPS in PUNCH Wave) is included in PUNCH Access & Support
+        (d.p === "PUNCH" ? '<p class="q-hint">Included: face, ID-card, Bluetooth and location (GPS) punching.</p>'
+          : '<label class="q-check"><input type="checkbox" data-p="' + d.p + '" data-k="remote"' + (r.remote ? " checked" : "") + "> " +
+            "Remote login (use it from a browser / mobile outside your office)</label>") + "</div></div>";
     }).join("") || '<p class="q-hint">Choose a product above.</p>';
     $("q-reqs").querySelectorAll("input").forEach(function (i) {
       i.addEventListener("input", function () { req[i.dataset.p][i.dataset.k] = i.type === "checkbox" ? i.checked : i.value; calc(); });
