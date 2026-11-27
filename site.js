@@ -118,7 +118,7 @@ document.querySelectorAll(".p-tour").forEach(function (tour) {
 });
 
 // 14-11-2026: "Ask us" panel - the question goes to the developer's WhatsApp (DEV_WA), not Customer Care
-var DEV_WA = "917000215253";
+var DEV_WA = "919179172153";   // 27-11-2026: NEXTACH number (requests & other communication)
 (function () {
   var panel = document.getElementById("ask-panel"), btn = document.querySelector(".ask-btn");
   if (!panel) return;
