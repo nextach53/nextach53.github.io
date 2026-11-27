@@ -123,6 +123,15 @@
    "offer": 999,
    "price": 999,
    "validity": "1 Year"
+  },
+  {
+   "code": "NX-PNAC",
+   "details": "PUNCH Access & Support - Annual (1 Admin + 2 Users + Location Punching)",
+   "discount": 0,
+   "hsn": "997331",
+   "offer": 999,
+   "price": 999,
+   "validity": "1 Year"
   }
  ],
  "seller": {
